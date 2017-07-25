@@ -1,0 +1,7 @@
+platform :ios, '9.0'
+
+target 'BWAlgorithm' do
+  
+pod 'Masonry'
+
+end
