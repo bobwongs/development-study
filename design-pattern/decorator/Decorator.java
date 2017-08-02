@@ -10,6 +10,7 @@ public class Decorator
         clothes = new Hat(clothes);
         clothes = new Jean(clothes);
         System.out.println("total cost: " + clothes.cost());
+        System.out.println("total description: " + clothes.getDescription());
     }
 }
 
@@ -25,13 +26,17 @@ class Decoration
         return this.name;
     }
 
+    public String getDescription() {
+        return this.name;
+    }
+
     public double cost() {
         return 0.0;
     }
 }
 
 /**
- * SpringMatching
+ * SpringMatching, only match once
  */
 class SpringMatching extends Decoration
 {
@@ -46,7 +51,7 @@ class SpringMatching extends Decoration
 }
 
 /**
- * SummerMatching
+ * SummerMatching, only match once
  */
 class SummerMatching extends Decoration
 {
@@ -61,11 +66,11 @@ class SummerMatching extends Decoration
 }
 
 /**
- * Clothes
+ * Clothes, can match more than once
  */
 abstract class Clothes extends Decoration 
 {
-    // abstract public double totalCost();
+    
 }
 
 /**
@@ -81,8 +86,13 @@ class Overcoat extends Clothes
     }
 
     @Override
+    public String getDescription() {
+        return this.name + " " + this.decoration.getDescription() + " ";
+    }
+
+    @Override
     public double cost() {
-        return 60.0 + decoration.cost();
+        return 60.0 + this.decoration.cost();
     }
 }
 
@@ -96,6 +106,11 @@ class Hat extends Clothes
     public Hat(Decoration d) {
         this.decoration = d;
         this.name = "Hat";
+    }
+
+    @Override
+    public String getDescription() {
+        return this.name + " " + this.decoration.getDescription() + " ";
     }
 
     @Override
@@ -114,6 +129,11 @@ class Jean extends Clothes
     public Jean (Decoration d) {
         this.decoration = d;
         this.name = "Jean";
+    }
+
+    @Override
+    public String getDescription() {
+        return this.name + " " + this.decoration.getDescription() + " ";
     }
 
     @Override
