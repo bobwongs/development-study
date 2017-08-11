@@ -5,7 +5,12 @@
 public class Facade 
 {
     public static void main(String[] args) {
-        HomeMovieTheatre homeMovieTheatre = new HomeMovieTheatre();
+        Light light = new Light();
+        MusicPlayer musicPlayer = new MusicPlayer();
+        Kettle kettle = new Kettle();
+        Toast toast = new Toast();
+
+        HomeMovieTheatre homeMovieTheatre = new HomeMovieTheatre(light, musicPlayer, kettle, toast);
         homeMovieTheatre.everythingOn();
         homeMovieTheatre.everythingOff();
     }
@@ -16,49 +21,88 @@ public class Facade
  */
 class HomeMovieTheatre 
 {
+    Light light;
+    MusicPlayer musicPlayer;
+    Kettle kettle;
+    Toast toast;
+
+    public HomeMovieTheatre(Light light, MusicPlayer musicPlayer, Kettle kettle, Toast toast) {
+        this.light = light;
+        this.musicPlayer = musicPlayer;
+        this.kettle = kettle;
+        this.toast = toast;
+    }
+
     public void everythingOn() {
-        lightUp();
-        playMusic();
-        boilWater();
-        toast();    
+        System.out.println("Everything on:");
+
+        this.light.on();
+        this.musicPlayer.play();
+        this.kettle.on();
+        this.toast.on();
     }
 
     public void everythingOff() {
-        lightOff();
-        endMusic();
-        endBoilWater();
-        endToast();
+        System.out.println("Everything off:");
+        this.light.off();
+        this.musicPlayer.stop();
+        this.kettle.off();
+        this.toast.off();
     }
+}
 
-    public void lightUp() {
-        System.out.println("lightUp");
+/**
+ * Light
+ */
+class Light 
+{
+    public void on() {
+        System.out.println("Light up!");
     }
     
-    public void lightOff() {
-        System.out.println("lightOff");
+    public void off() {
+        System.out.println("Light off!");
+    }
+}
+
+/**
+ * MusicPlayer
+ */
+class MusicPlayer 
+{
+    public void play() {
+        System.out.println("MusicPlayer play!");
     }
 
-    public void playMusic() {
-        System.out.println("playMusic");
+    public void stop() {
+        System.out.println("MusicPlayer stop!");
+    }
+}
+
+/**
+ * Kettle
+ */
+class Kettle 
+{
+    public void on() {
+        System.out.println("Boil water!");
     }
 
-    public void endMusic() {
-        System.out.println("endMusic");
+    public void off() {
+        System.out.println("End boil water!");
+    }
+}
+
+/**
+ * Toast
+ */
+class Toast 
+{
+    public void on() {
+        System.out.println("Toast on!");
     }
 
-    public void boilWater() {
-        System.out.println("boilWater");
-    }
-
-    public void endBoilWater() {
-        System.out.println("endBoilWater");
-    }
-
-    public void toast() {
-        System.out.println("toast");
-    }
-
-    public void endToast() {
-        System.out.println("endToast");
+    public void off() {
+        System.out.println("Toast off!");
     }
 }
