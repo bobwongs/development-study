@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		776739FF973CC27A63B231B7 /* libPods-BWiOSStudy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4C707CDD211F45D9886F75 /* libPods-BWiOSStudy.a */; };
 		AE6B5429C90416B1B8A92EC9 /* libPods-BWiOSStudyUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA38AC37AF8A6DA8AD347560 /* libPods-BWiOSStudyUITests.a */; };
+		B43B47C920275CC5001EF4DC /* BWAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B43B47C820275CC5001EF4DC /* BWAnimationViewController.m */; };
 		B4D6843E1F7F3B1700C42934 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D6843D1F7F3B1700C42934 /* main.m */; };
 		B4D684411F7F3B1700C42934 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D684401F7F3B1700C42934 /* AppDelegate.m */; };
 		B4D684471F7F3B1700C42934 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4D684451F7F3B1700C42934 /* Main.storyboard */; };
@@ -46,6 +47,8 @@
 		9F69C0D0DD9A4F9B63DB7A9B /* Pods-BWiOSStudyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWiOSStudyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWiOSStudyTests/Pods-BWiOSStudyTests.release.xcconfig"; sourceTree = "<group>"; };
 		AA245579108AC882DA013107 /* Pods-BWiOSStudyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWiOSStudyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BWiOSStudyTests/Pods-BWiOSStudyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AA38AC37AF8A6DA8AD347560 /* libPods-BWiOSStudyUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BWiOSStudyUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B43B47C720275CC5001EF4DC /* BWAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWAnimationViewController.h; sourceTree = "<group>"; };
+		B43B47C820275CC5001EF4DC /* BWAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWAnimationViewController.m; sourceTree = "<group>"; };
 		B4D684391F7F3B1700C42934 /* BWiOSStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWiOSStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4D6843D1F7F3B1700C42934 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B4D6843F1F7F3B1700C42934 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -105,6 +108,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B43B47C1202757B0001EF4DC /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				B43B47C720275CC5001EF4DC /* BWAnimationViewController.h */,
+				B43B47C820275CC5001EF4DC /* BWAnimationViewController.m */,
+				B43B47C2202757B0001EF4DC /* UIView */,
+				B43B47C3202757B0001EF4DC /* CAAnimation */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		B43B47C2202757B0001EF4DC /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		B43B47C3202757B0001EF4DC /* CAAnimation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CAAnimation;
+			sourceTree = "<group>";
+		};
 		B4D684301F7F3B1700C42934 = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +201,7 @@
 			children = (
 				B4D684701F7F426000C42934 /* Home */,
 				B4D684711F7F426000C42934 /* Layout */,
+				B43B47C1202757B0001EF4DC /* Animation */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -546,6 +575,7 @@
 				B4D684411F7F3B1700C42934 /* AppDelegate.m in Sources */,
 				B4D6847B1F7F426000C42934 /* BWConstraintsController.m in Sources */,
 				B4D6847C1F7F426000C42934 /* BWFrameController.m in Sources */,
+				B43B47C920275CC5001EF4DC /* BWAnimationViewController.m in Sources */,
 				B4D6843E1F7F3B1700C42934 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
