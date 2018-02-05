@@ -1,0 +1,15 @@
+{
+  "name": "mysocket",
+  "version": "1.0.0",
+  "description": "study socket.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node index.js"
+  },
+  "author": "Bob",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "^2.0.4"
+  }
+}
