@@ -54,7 +54,7 @@
     [view0 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(space);
         make.width.mas_equalTo(w_view);
-        make.top.mas_equalTo(NAVIGATION_BAR_HEIGHT_FULL + space);
+        make.top.mas_equalTo(64 + space);
         make.height.mas_equalTo(50);
     }];
     

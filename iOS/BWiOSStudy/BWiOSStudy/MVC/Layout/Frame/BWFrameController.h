@@ -6,8 +6,8 @@
 //  Copyright © 2016年 Bob Wong Studio. All rights reserved.
 //
 
-#import "BWBaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface BWFrameController : BWBaseViewController
+@interface BWFrameController : UIViewController
 
 @end

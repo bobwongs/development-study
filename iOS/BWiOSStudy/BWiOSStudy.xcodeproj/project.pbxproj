@@ -73,6 +73,7 @@
 		B4D684841F7F477A00C42934 /* BWLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWLayoutViewController.m; sourceTree = "<group>"; };
 		B4D684871F7F4BEA00C42934 /* BWLayoutTest0View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWLayoutTest0View.h; sourceTree = "<group>"; };
 		B4D684881F7F4BEA00C42934 /* BWLayoutTest0View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWLayoutTest0View.m; sourceTree = "<group>"; };
+		B4E02EB12027E4E5006646EB /* BWiOSStudy.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWiOSStudy.pch; sourceTree = "<group>"; };
 		BC4C707CDD211F45D9886F75 /* libPods-BWiOSStudy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BWiOSStudy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6B72EB7096B6A9B237F257B /* libPods-BWiOSStudyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BWiOSStudyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB96689141B2F001E7AFEC2D /* Pods-BWiOSStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWiOSStudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWiOSStudy/Pods-BWiOSStudy.release.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +175,7 @@
 				B4D6843D1F7F3B1700C42934 /* main.m */,
 				B4D6844D1F7F3B1700C42934 /* Info.plist */,
 				B4D6844A1F7F3B1700C42934 /* LaunchScreen.storyboard */,
+				B4E02EB12027E4E5006646EB /* BWiOSStudy.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -727,6 +729,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V3E8GUFW32;
+				GCC_PREFIX_HEADER = BWiOSStudy/BWiOSStudy.pch;
 				INFOPLIST_FILE = BWiOSStudy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -741,6 +744,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V3E8GUFW32;
+				GCC_PREFIX_HEADER = BWiOSStudy/BWiOSStudy.pch;
 				INFOPLIST_FILE = BWiOSStudy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
