@@ -7,6 +7,7 @@
 //
 
 #import "BWLayoutViewController.h"
+#import "BWLayoutTest0View.h"
 
 @interface BWLayoutViewController ()
 
