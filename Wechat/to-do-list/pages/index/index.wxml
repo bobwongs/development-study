@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="input-container">
+    <input placeholder='请输入'></input>
+    <button>添加</button>
+  </view>
+  <view wx:for="{{array}}">
+    {{index}}. {{item.message}}
+  </view>
+</view>
