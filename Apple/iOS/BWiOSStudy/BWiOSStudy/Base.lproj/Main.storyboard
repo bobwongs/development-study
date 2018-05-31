@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zzh-Tg-54M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cmy-8s-QAK">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -159,6 +159,58 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1188.4057971014495" y="868.20652173913049"/>
+        </scene>
+        <!--Study View Controller-->
+        <scene sceneID="hvM-yJ-gw4">
+            <objects>
+                <viewController id="Cmy-8s-QAK" customClass="BWStudyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z8d-wl-fRs"/>
+                        <viewControllerLayoutGuide type="bottom" id="nW8-d1-fcI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TGv-yS-oNo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbv-gi-ORE">
+                                <rect key="frame" x="187" y="158" width="40" height="30"/>
+                                <state key="normal" title="SayHi"/>
+                                <connections>
+                                    <action selector="sayHi:" destination="Cmy-8s-QAK" eventType="touchUpInside" id="YN2-xW-5Rf"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gka-hJ-0ld">
+                                <rect key="frame" x="71" y="234" width="274" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAT-Lo-AOr">
+                                <rect key="frame" x="190" y="308" width="36" height="30"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clear:" destination="Cmy-8s-QAK" eventType="touchUpInside" id="wRo-qi-amc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gka-hJ-0ld" firstAttribute="top" secondItem="sbv-gi-ORE" secondAttribute="bottom" constant="46" id="AxZ-zs-QDR"/>
+                            <constraint firstItem="gka-hJ-0ld" firstAttribute="centerX" secondItem="aAT-Lo-AOr" secondAttribute="centerX" id="Do5-1x-xSV"/>
+                            <constraint firstItem="sbv-gi-ORE" firstAttribute="top" secondItem="Z8d-wl-fRs" secondAttribute="bottom" constant="138" id="RG5-QO-9z8"/>
+                            <constraint firstItem="gka-hJ-0ld" firstAttribute="leading" secondItem="TGv-yS-oNo" secondAttribute="leadingMargin" constant="51" id="SdA-7k-ZXp"/>
+                            <constraint firstItem="sbv-gi-ORE" firstAttribute="centerX" secondItem="TGv-yS-oNo" secondAttribute="centerX" id="k2x-7F-wFM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gka-hJ-0ld" secondAttribute="trailing" constant="49" id="nT0-US-Bd4"/>
+                            <constraint firstItem="aAT-Lo-AOr" firstAttribute="top" secondItem="gka-hJ-0ld" secondAttribute="bottom" constant="44" id="rBH-dI-gX6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="gka-hJ-0ld" id="zv4-2X-4hd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jvu-GD-Lmq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-275.36231884057975" y="-633.42391304347836"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fsa-cm-MRQ">

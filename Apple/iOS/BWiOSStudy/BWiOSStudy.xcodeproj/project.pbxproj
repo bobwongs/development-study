@@ -10,6 +10,8 @@
 		776739FF973CC27A63B231B7 /* libPods-BWiOSStudy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4C707CDD211F45D9886F75 /* libPods-BWiOSStudy.a */; };
 		AE6B5429C90416B1B8A92EC9 /* libPods-BWiOSStudyUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA38AC37AF8A6DA8AD347560 /* libPods-BWiOSStudyUITests.a */; };
 		B43B47C920275CC5001EF4DC /* BWAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B43B47C820275CC5001EF4DC /* BWAnimationViewController.m */; };
+		B4C1DF5E20BBFB91009FBAB1 /* BWStudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DF5D20BBFB91009FBAB1 /* BWStudyViewController.m */; };
+		B4C1DF6120BC03D9009FBAB1 /* BWiOSStudyUITestsSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DF6020BC03D9009FBAB1 /* BWiOSStudyUITestsSwift.swift */; };
 		B4D6843E1F7F3B1700C42934 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D6843D1F7F3B1700C42934 /* main.m */; };
 		B4D684411F7F3B1700C42934 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D684401F7F3B1700C42934 /* AppDelegate.m */; };
 		B4D684471F7F3B1700C42934 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4D684451F7F3B1700C42934 /* Main.storyboard */; };
@@ -49,6 +51,10 @@
 		AA38AC37AF8A6DA8AD347560 /* libPods-BWiOSStudyUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BWiOSStudyUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43B47C720275CC5001EF4DC /* BWAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWAnimationViewController.h; sourceTree = "<group>"; };
 		B43B47C820275CC5001EF4DC /* BWAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWAnimationViewController.m; sourceTree = "<group>"; };
+		B4C1DF5C20BBFB91009FBAB1 /* BWStudyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWStudyViewController.h; sourceTree = "<group>"; };
+		B4C1DF5D20BBFB91009FBAB1 /* BWStudyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWStudyViewController.m; sourceTree = "<group>"; };
+		B4C1DF5F20BC03D8009FBAB1 /* BWiOSStudyUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BWiOSStudyUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		B4C1DF6020BC03D9009FBAB1 /* BWiOSStudyUITestsSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWiOSStudyUITestsSwift.swift; sourceTree = "<group>"; };
 		B4D684391F7F3B1700C42934 /* BWiOSStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWiOSStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4D6843D1F7F3B1700C42934 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B4D6843F1F7F3B1700C42934 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -134,6 +140,15 @@
 			path = CAAnimation;
 			sourceTree = "<group>";
 		};
+		B4C1DF5B20BBFB7B009FBAB1 /* Study */ = {
+			isa = PBXGroup;
+			children = (
+				B4C1DF5C20BBFB91009FBAB1 /* BWStudyViewController.h */,
+				B4C1DF5D20BBFB91009FBAB1 /* BWStudyViewController.m */,
+			);
+			path = Study;
+			sourceTree = "<group>";
+		};
 		B4D684301F7F3B1700C42934 = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +209,8 @@
 			children = (
 				B4D684611F7F3B1700C42934 /* BWiOSStudyUITests.m */,
 				B4D684631F7F3B1700C42934 /* Info.plist */,
+				B4C1DF6020BC03D9009FBAB1 /* BWiOSStudyUITestsSwift.swift */,
+				B4C1DF5F20BC03D8009FBAB1 /* BWiOSStudyUITests-Bridging-Header.h */,
 			);
 			path = BWiOSStudyUITests;
 			sourceTree = "<group>";
@@ -201,6 +218,7 @@
 		B4D6846F1F7F3BE900C42934 /* MVC */ = {
 			isa = PBXGroup;
 			children = (
+				B4C1DF5B20BBFB7B009FBAB1 /* Study */,
 				B4D684701F7F426000C42934 /* Home */,
 				B4D684711F7F426000C42934 /* Layout */,
 				B43B47C1202757B0001EF4DC /* Animation */,
@@ -367,6 +385,7 @@
 					B4D6845C1F7F3B1700C42934 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = V3E8GUFW32;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = B4D684381F7F3B1700C42934;
 					};
@@ -579,6 +598,7 @@
 				B4D6847C1F7F426000C42934 /* BWFrameController.m in Sources */,
 				B43B47C920275CC5001EF4DC /* BWAnimationViewController.m in Sources */,
 				B4D6843E1F7F3B1700C42934 /* main.m in Sources */,
+				B4C1DF5E20BBFB91009FBAB1 /* BWStudyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +614,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4C1DF6120BC03D9009FBAB1 /* BWiOSStudyUITestsSwift.swift in Sources */,
 				B4D684621F7F3B1700C42934 /* BWiOSStudyUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -785,11 +806,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F8FCA05F4A3CC2972543249C /* Pods-BWiOSStudyUITests.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = V3E8GUFW32;
 				INFOPLIST_FILE = BWiOSStudyUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bws.BWiOSStudyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BWiOSStudyUITests/BWiOSStudyUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = BWiOSStudy;
 			};
 			name = Debug;
@@ -798,11 +823,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8C742BDA2C4C1B70B7A30A50 /* Pods-BWiOSStudyUITests.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = V3E8GUFW32;
 				INFOPLIST_FILE = BWiOSStudyUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bws.BWiOSStudyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BWiOSStudyUITests/BWiOSStudyUITests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = BWiOSStudy;
 			};
 			name = Release;
