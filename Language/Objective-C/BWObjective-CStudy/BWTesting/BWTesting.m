@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "BWCounter.h"
+//#import "BWCounter.h"
 
 @interface BWTesting : XCTestCase
 
@@ -29,10 +29,10 @@
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
     
-    BWCounter *counter = [BWCounter new];
-    [counter add:10];
-    [counter minus:10];
-    XCTAssertEqual(counter.count, 0);
+//    BWCounter *counter = [BWCounter new];
+//    [counter add:10];
+//    [counter minus:10];
+//    XCTAssertEqual(counter.count, 0);
 }
 
 - (void)testPerformanceExample {
