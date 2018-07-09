@@ -2,31 +2,72 @@
 
 import Cocoa
 
-let block0 = {
-    () -> Void in
-    print("my block")
-}
-block0()
 
-let block1 = {
-    (str: String) -> Void in
-        print("str: " + str)
-        print("hello")
-        for i in 1...10 {
-            print("index: \(i)")
+struct Student {
+    var name: String?
+    var age: Int?
+    
+    func study() {
+        print("Student's name of \(self.name ?? "No Student Name"): Studying")
+    }
+    
+    mutating func changeMyName(newName: String?) {
+        self.name = newName
+    }
+    
+    init(_ name: String?,_ age: Int?) {
+        self.name = name
+        self.age = age
+    }
+}
+
+var std0 = Student("Mary", 32)
+std0.study()
+std0.name = "Bob"
+std0.study()
+
+var std1 = std0
+std1.name = "Jenny"
+std0.study()
+std1.study()
+
+
+class Teacher {
+    var name: String?
+    var age: Int?
+    
+    init(name: String?, age: Int?) {
+        self.name = name
+        self.age = age
+    }
+    
+    func teach() {
+        print("Teacher's name of \(self.name ?? "No Student Name"): Studying")
+    }
+    
+    var isSuitable: Bool {
+        if let age = self.age {
+            return (age > 35 && age < 50)
         }
+        return false
+    }
 }
-//block1("ni")
 
-let blk2: (Any, Any) -> Any
-blk2 = {
-    (a, b) -> Void in
-    print("block2: \(a)")
+var teacher0 = Teacher(name: "Flame", age: 32)
+print("is suitable: \(teacher0.isSuitable)")
+
+class Chinese {
+    var name: String?
 }
-blk2(23, 32)
 
-
-func sayHi(_ a: String, b: String) {
-    print("say hi: \(a)")
+class English {
+    var age: Int?
 }
-sayHi("o", "b")
+
+
+var myName: String?
+do {
+    try myName!.description
+} catch Pattern {
+    print
+}
