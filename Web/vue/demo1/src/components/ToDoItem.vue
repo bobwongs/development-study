@@ -8,9 +8,7 @@
 export default {
   name: 'ToDoItem',
   data () {
-    return {
-      
-    }
+    return {}
   }
 }
 </script>

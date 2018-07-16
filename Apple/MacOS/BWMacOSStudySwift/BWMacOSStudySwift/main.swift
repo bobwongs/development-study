@@ -11,7 +11,8 @@ import Foundation
 print("Hello, World!")
 
 let block1 = {
-    (str: String) -> Void in
+    (str: String
+    ) -> Void in
         print("hello")
         print("hi")
 }
