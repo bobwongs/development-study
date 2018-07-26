@@ -9,46 +9,52 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
+
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
+
+  operateArray: function (array) {
+    array = [...array, 'new item']
   },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
+
+  onLoad: function () {
+    
+    let obj0 = {
+      month: 0
+    }
+    let obj1 = {
+      month: 1
+    }
+    let obj2 = {
+      month: 2
+    }
+
+    function sortObj(a, b) {
+
+    }
+    
+    let array0 = [obj1, obj2, obj0]
+    console.log(array0.length)
+
+    let array1 = array0.sort((a,b) => (a.month - b.month))
+    console.log(array1)
+
+    // let array = [1, 2, 3], array1 = [4, 5]
+    // // array = [...array, ...array1]
+    // // console.log(array)
+
+    // let array2 = array
+    // console.log('array2:' + array2)
+    // array2.push('4')
+    // console.log('array2:' + array2)
+    // console.log('array:' + array)
+
+    // this.operateArray(array2)
+    // console.log('array2:' + array2)
+
   }
 })

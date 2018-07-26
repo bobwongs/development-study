@@ -5,17 +5,33 @@
   align-items: center;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
 .userinfo-nickname {
   color: #aaa;
 }
 
 .usermotto {
-  margin-top: 200px;
+}
+
+.long-text {
+  background-color: orange;
+  width: 100%;
+
+  -webkit-line-clamp:2;
+  font-size:28rpx;
+  color:#000000;
+  line-height: 40rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+
+.long-text-second {
+
+}
+
+.highlight {
+  background: orange;
+  font-weight: bold;
 }

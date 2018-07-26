@@ -1,13 +1,21 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
+
+  <template is="product-cell" wx:for="{{[1, 2]}}" /> 
 </view>
+
+
+<template name="product-cell">
+  <view>My Template</view>
+</template>
+
+
+
+<view class='long-text'>
+  LongTextLongTextLongTextLongTextLongTextLongTextLongTextLongTextLongTextLongTextLongTextLongTextLongTextLongTextLongTextLongTextLongTextLongText
+</view>
+
+<text class='highlight'>joijo<text>Sub Tag</text></text>
