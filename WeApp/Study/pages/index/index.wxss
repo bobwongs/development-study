@@ -9,9 +9,6 @@
   color: #aaa;
 }
 
-.usermotto {
-}
-
 .long-text {
   background-color: orange;
   width: 100%;
