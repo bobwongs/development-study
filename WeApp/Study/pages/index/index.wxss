@@ -1,34 +1,23 @@
 /**index.wxss**/
-.userinfo {
+.box {
+  /* height: 200rpx; */
   display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.left {
+  flex-grow: 1;
+  background: lightgray;
 }
 
-.long-text {
-  background-color: orange;
-  width: 100%;
-
-  -webkit-line-clamp:2;
-  font-size:28rpx;
-  color:#000000;
-  line-height: 40rpx;
-  display: -webkit-box;
-  word-break: break-all;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow:ellipsis;
+.right {
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  width: 375rpx;
+  background: peru;
 }
 
-.long-text-second {
-
-}
-
-.highlight {
+.icon {
+  width: 50rpx;
+  height: 50rpx;
   background: orange;
-  font-weight: bold;
 }

@@ -1,0 +1,6 @@
+./a.png
+./b.png
+./subsource0
+./subsource0/c.png
+./subsource1
+./subsource1/d.png

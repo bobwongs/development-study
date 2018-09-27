@@ -1,0 +1,4 @@
+<!--components/custom/custom.wxml-->
+<custom class='my-class'>
+  <text>components/custom/custom.wxml</text>
+</custom>
