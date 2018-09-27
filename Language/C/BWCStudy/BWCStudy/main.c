@@ -23,6 +23,7 @@ int main(int argc, const char * argv[]) {
 //    p2();
     p0 = &sayHi;
     ((void (*)(void))p0)();
+    
     return 0;
 }
 
