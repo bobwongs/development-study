@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My first Vue app</title>
+  <!-- <script src="https://unpkg.com/vue"></script> -->
+  <script src="node_modules/vue/dist/vue.js"></script>
+  <script src="node_modules/vue-router/dist/vue-router.js"></script>
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="css/list.css" />
+</head>
+<body>
+  <!-- <div id="app">
+    <div id="header">
+      To Do List
+    </div>
+    <div id="input-view">
+      <input v-model="inputedText" placeholder="Input to do item">
+      <button v-on:click="add">Add</button>
+    </div>
+    <div id="list">
+      <ol>
+        <li v-for="item in toDoList">
+          {{item}}
+        </li>
+      </ol>
+    </div> -->
+    <div id="test">
+      <!-- <router-link to="/add-to-do">Change View</router-link> -->
+      <router-view></router-view>
+    </div>
+  </div>
+
+  <div
+</body>
+<script>
+    const Home = {
+      template: '<div>Home</div>'
+    }
+    const AddToDo = {
+      template: '<div>AddToDo</div>'
+    }
+
+    Vue.component('my-item', {
+      template: `
+      
+      `
+    })
+
+    const router = new VueRouter({
+      routes: [
+        { 
+          path: '/', 
+          component: Home
+        },
+        {
+          path: '/add-to-do',
+          component: AddToDo
+        }
+      ]
+    })
+    
+    // const test = new Vue({ router }).$mount('#test')
+    const test = new Vue({
+      el: '#test',
+      methods: {
+        test: function (e) {
+          // router.push({ path: '/add-to-do' })
+          console.log('test')
+        }
+      },
+      router
+    })
+
+    // var app = new Vue({
+    //   el: '#app',
+    //   data: {
+    //     toDoList: ['first', 'second'],
+    //     inputedText: ''
+    //   },
+    //   methods: {
+    //     add: function (e) {
+    //       if (!this.inputedText.length) return
+    //       this.toDoList = [...this.toDoList, this.inputedText]
+    //       this.inputedText = ''
+    //     }
+    //   }
+    // })
+  </script>
+</html>

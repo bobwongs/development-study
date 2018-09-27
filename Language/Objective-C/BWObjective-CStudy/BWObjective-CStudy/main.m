@@ -23,6 +23,13 @@ int main(int argc, const char * argv[]) {
 
 //        test0();
         test1();
+        NSDictionary *dict = @{@"url": @"https://www.baidu.com"};
+        NSData *data = [NSJSONSerialization dataWithJSONObject:dict options:0 error:NULL];
+        NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSLog(@"json string: %@", jsonString);
+        
+        NSDictionary *newDict = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:0 error:NULL];
+        NSLog(@"new dict: %@", newDict);
         
     }
     return 0;
