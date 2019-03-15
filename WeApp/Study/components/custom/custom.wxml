@@ -1,4 +1,7 @@
 <!--components/custom/custom.wxml-->
 <custom class='my-class'>
-  <text>components/custom/custom.wxml</text>
+  <view catchtap='tap'>Custom Component Header{{name}}</view>
+  <input bindinput='bindKeyInput' placeholder='Please input' bindconfirm='bindconfirm' bindblur='bindblur'></input>
+
+  <text>{{log}}</text>
 </custom>

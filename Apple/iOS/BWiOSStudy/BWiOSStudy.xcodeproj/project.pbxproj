@@ -10,6 +10,7 @@
 		776739FF973CC27A63B231B7 /* libPods-BWiOSStudy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4C707CDD211F45D9886F75 /* libPods-BWiOSStudy.a */; };
 		AE6B5429C90416B1B8A92EC9 /* libPods-BWiOSStudyUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA38AC37AF8A6DA8AD347560 /* libPods-BWiOSStudyUITests.a */; };
 		B43B47C920275CC5001EF4DC /* BWAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B43B47C820275CC5001EF4DC /* BWAnimationViewController.m */; };
+		B474F4A12179C8350040E1E1 /* BWDemo0VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B474F4A02179C8350040E1E1 /* BWDemo0VC.m */; };
 		B4C1DF5E20BBFB91009FBAB1 /* BWStudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DF5D20BBFB91009FBAB1 /* BWStudyViewController.m */; };
 		B4C1DF6120BC03D9009FBAB1 /* BWiOSStudyUITestsSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DF6020BC03D9009FBAB1 /* BWiOSStudyUITestsSwift.swift */; };
 		B4D6843E1F7F3B1700C42934 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D6843D1F7F3B1700C42934 /* main.m */; };
@@ -24,6 +25,8 @@
 		B4D684821F7F442600C42934 /* BWHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D684811F7F442600C42934 /* BWHomeTableViewController.m */; };
 		B4D684851F7F477A00C42934 /* BWLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D684841F7F477A00C42934 /* BWLayoutViewController.m */; };
 		B4D684891F7F4BEA00C42934 /* BWLayoutTest0View.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D684881F7F4BEA00C42934 /* BWLayoutTest0View.m */; };
+		B4ECABF421EF249100C47B1C /* BWDemo1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ECABF221EF249100C47B1C /* BWDemo1ViewController.m */; };
+		B4ECABF521EF249100C47B1C /* BWDemo1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4ECABF321EF249100C47B1C /* BWDemo1ViewController.xib */; };
 		C25813129B9FFF1DEC80CBDA /* libPods-BWiOSStudyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B72EB7096B6A9B237F257B /* libPods-BWiOSStudyTests.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +54,8 @@
 		AA38AC37AF8A6DA8AD347560 /* libPods-BWiOSStudyUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BWiOSStudyUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43B47C720275CC5001EF4DC /* BWAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWAnimationViewController.h; sourceTree = "<group>"; };
 		B43B47C820275CC5001EF4DC /* BWAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWAnimationViewController.m; sourceTree = "<group>"; };
+		B474F49F2179C8350040E1E1 /* BWDemo0VC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDemo0VC.h; sourceTree = "<group>"; };
+		B474F4A02179C8350040E1E1 /* BWDemo0VC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDemo0VC.m; sourceTree = "<group>"; };
 		B4C1DF5C20BBFB91009FBAB1 /* BWStudyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWStudyViewController.h; sourceTree = "<group>"; };
 		B4C1DF5D20BBFB91009FBAB1 /* BWStudyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWStudyViewController.m; sourceTree = "<group>"; };
 		B4C1DF5F20BC03D8009FBAB1 /* BWiOSStudyUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BWiOSStudyUITests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -80,6 +85,9 @@
 		B4D684871F7F4BEA00C42934 /* BWLayoutTest0View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWLayoutTest0View.h; sourceTree = "<group>"; };
 		B4D684881F7F4BEA00C42934 /* BWLayoutTest0View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWLayoutTest0View.m; sourceTree = "<group>"; };
 		B4E02EB12027E4E5006646EB /* BWiOSStudy.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWiOSStudy.pch; sourceTree = "<group>"; };
+		B4ECABF121EF249100C47B1C /* BWDemo1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDemo1ViewController.h; sourceTree = "<group>"; };
+		B4ECABF221EF249100C47B1C /* BWDemo1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDemo1ViewController.m; sourceTree = "<group>"; };
+		B4ECABF321EF249100C47B1C /* BWDemo1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWDemo1ViewController.xib; sourceTree = "<group>"; };
 		BC4C707CDD211F45D9886F75 /* libPods-BWiOSStudy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BWiOSStudy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6B72EB7096B6A9B237F257B /* libPods-BWiOSStudyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BWiOSStudyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB96689141B2F001E7AFEC2D /* Pods-BWiOSStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWiOSStudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWiOSStudy/Pods-BWiOSStudy.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +148,15 @@
 			path = CAAnimation;
 			sourceTree = "<group>";
 		};
+		B474F49E2179C81E0040E1E1 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				B474F49F2179C8350040E1E1 /* BWDemo0VC.h */,
+				B474F4A02179C8350040E1E1 /* BWDemo0VC.m */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
 		B4B91E9720C66AF700DB6F45 /* Database */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +169,7 @@
 			children = (
 				B4C1DF5C20BBFB91009FBAB1 /* BWStudyViewController.h */,
 				B4C1DF5D20BBFB91009FBAB1 /* BWStudyViewController.m */,
+				B4ECABF021EF247800C47B1C /* Demo1 */,
 			);
 			path = Study;
 			sourceTree = "<group>";
@@ -230,6 +248,7 @@
 				B4D684711F7F426000C42934 /* Layout */,
 				B43B47C1202757B0001EF4DC /* Animation */,
 				B4B91E9720C66AF700DB6F45 /* Database */,
+				B474F49E2179C81E0040E1E1 /* Demo */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -280,6 +299,16 @@
 				B4D684881F7F4BEA00C42934 /* BWLayoutTest0View.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B4ECABF021EF247800C47B1C /* Demo1 */ = {
+			isa = PBXGroup;
+			children = (
+				B4ECABF121EF249100C47B1C /* BWDemo1ViewController.h */,
+				B4ECABF221EF249100C47B1C /* BWDemo1ViewController.m */,
+				B4ECABF321EF249100C47B1C /* BWDemo1ViewController.xib */,
+			);
+			path = Demo1;
 			sourceTree = "<group>";
 		};
 		FB3D54E06C428BBA58FCE0B6 /* Pods */ = {
@@ -424,6 +453,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4ECABF521EF249100C47B1C /* BWDemo1ViewController.xib in Resources */,
 				B4D6844C1F7F3B1700C42934 /* LaunchScreen.storyboard in Resources */,
 				B4D684491F7F3B1700C42934 /* Assets.xcassets in Resources */,
 				B4D684471F7F3B1700C42934 /* Main.storyboard in Resources */,
@@ -598,6 +628,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4ECABF421EF249100C47B1C /* BWDemo1ViewController.m in Sources */,
 				B4D684891F7F4BEA00C42934 /* BWLayoutTest0View.m in Sources */,
 				B4D684821F7F442600C42934 /* BWHomeTableViewController.m in Sources */,
 				B4D684851F7F477A00C42934 /* BWLayoutViewController.m in Sources */,
@@ -605,6 +636,7 @@
 				B4D6847B1F7F426000C42934 /* BWConstraintsController.m in Sources */,
 				B4D6847C1F7F426000C42934 /* BWFrameController.m in Sources */,
 				B43B47C920275CC5001EF4DC /* BWAnimationViewController.m in Sources */,
+				B474F4A12179C8350040E1E1 /* BWDemo0VC.m in Sources */,
 				B4D6843E1F7F3B1700C42934 /* main.m in Sources */,
 				B4C1DF5E20BBFB91009FBAB1 /* BWStudyViewController.m in Sources */,
 			);

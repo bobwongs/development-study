@@ -22,28 +22,34 @@ Page({
 
     region: [],
 
-    myRange: []
+    myRange: [],
+
+    pickerList: [],
+    startHours: [],
+    startMinutes: []
   },
 
   onLoad() {
-    let count = '0', num = '2'
-    switch (count) {
-      case '0': {
-        console.log('0')
-        switch (num) {
-          
-        }
-        break
+    this.myMethod({
+      success: (data) => {
+        console.log(JSON.stringify(data))
       }
-      case '1': {
-        console.log('1')
-        break
-      }
-      case '2': {
-        console.log('2')
-        break
-      }
+    })
+
+    let startHours = []
+    for (let i = 0; i < 24; i++) {
+      startHours = [...startHours, i]
     }
+
+    let startMinutes = []
+    for (let i = 0; i < 60; i++) {
+      startMinutes = [...startMinutes, i]
+    }
+
+    this.setData({ startHours, startMinutes })
+
+    let text = '01'
+    console.log('text: ' + Number(text))
   },
 
   //事件处理函数
@@ -77,6 +83,70 @@ Page({
 
   bindScroll: function (e) {
     console.log('bindScroll')
-  }
+  },
 
+  selectAddress: function (e) {
+    console.log('selectAddress')
+    wx.chooseLocation({
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+  },
+
+  testTap (e) {
+    console.log('test tap')
+    console.log('e: \n' + JSON.stringify(e))
+
+    this.myMethod()
+  },
+
+  myMethod () {
+    console.log('my method')
+  },
+
+  tap0(e) {
+    console.log('tap0: \n')
+    console.log(JSON.stringify(e))
+  },
+
+  myTap(e) {
+    console.log('myTap')
+    console.log(JSON.stringify(e))
+  },
+
+  share() {
+    console.log('share')
+    wx.showShareMenu({
+      withShareTicket: true,
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+  },
+
+  myMethod({success, fail}) {
+    if (success) success({
+      first: 'one',
+      second: 'two'
+    })
+  },
+
+  pickEnd(e) {
+    console.log('pickEnd: ' + e.detail)
+  },
+
+  pickChange(e) {
+    console.log('bindchange: ' + JSON.stringify(e.detail))
+  },
+
+  changePage() {
+    wx.redirectTo({
+      url: '/pages/logs/logs'
+    })
+  },
+
+  onShareAppMessage() {
+    console.log('my share')
+  }
 })

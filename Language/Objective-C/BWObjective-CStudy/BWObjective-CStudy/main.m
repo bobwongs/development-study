@@ -17,13 +17,21 @@ int main(int argc, const char * argv[]) {
 //        id<BWCommonProtocol> object = [BWMessageSending new];
 //        [object test];
         
-        NSDictionary *dict = @{@"url": @"https://www.baidu.com"};
-        NSData *data = [NSJSONSerialization dataWithJSONObject:dict options:0 error:NULL];
-        NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        NSLog(@"json string: %@", jsonString);
+//        NSDictionary *dict = @{@"url": @"https://www.baidu.com"};
+//        NSData *data = [NSJSONSerialization dataWithJSONObject:dict options:0 error:NULL];
+//        NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//        NSLog(@"json string: %@", jsonString);
+//
+//        NSDictionary *newDict = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:0 error:NULL];
+//        NSLog(@"new dict: %@", newDict);
         
-        NSDictionary *newDict = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:0 error:NULL];
-        NSLog(@"new dict: %@", newDict);
+        NSString *string = @"     this text has spaces before and after ";
+        NSString *trimmedString = [string stringByTrimmingCharactersInSet:
+                                   [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        NSLog(@"original:\n%@", string);
+        NSLog(@"result:\n%@", trimmedString);
+        NSLog(@"\nMy String");
         
     }
     return 0;
