@@ -20,6 +20,19 @@ int main(int argc, const char * argv[]) {
 //        id<BWCommonProtocol> object = [BWMessageSending new];
 //        [object test];
         
+<<<<<<< HEAD
+//        NSDictionary *dict = @{@"url": @"https://www.baidu.com"};
+//        NSData *data = [NSJSONSerialization dataWithJSONObject:dict options:0 error:NULL];
+//        NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//        NSLog(@"json string: %@", jsonString);
+//
+//        NSDictionary *newDict = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:0 error:NULL];
+//        NSLog(@"new dict: %@", newDict);
+        
+        NSString *string = @"     this text has spaces before and after ";
+        NSString *trimmedString = [string stringByTrimmingCharactersInSet:
+                                   [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+=======
 
 //        test0();
         test1();
@@ -27,9 +40,11 @@ int main(int argc, const char * argv[]) {
         NSData *data = [NSJSONSerialization dataWithJSONObject:dict options:0 error:NULL];
         NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         NSLog(@"json string: %@", jsonString);
+>>>>>>> 8cb426c6d7fa5d2163966e857222118d6d737c05
         
-        NSDictionary *newDict = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:0 error:NULL];
-        NSLog(@"new dict: %@", newDict);
+        NSLog(@"original:\n%@", string);
+        NSLog(@"result:\n%@", trimmedString);
+        NSLog(@"\nMy String");
         
     }
     return 0;

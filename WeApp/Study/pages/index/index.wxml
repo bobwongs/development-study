@@ -1,4 +1,5 @@
-<!--index.wxml-->
+
+background-image: linear-gradient(90deg, #5191FF 100%, #0058F1 0%);<!--index.wxml-->
 <view class='box'>
   <view class='left'>
   <!-- <scroll-view class='left'> -->
@@ -11,10 +12,65 @@
   </view>
 </view>
 
-<picker mode="region" bindchange="bindRegionChange" value="{{region}}" bindcolumnchange="bindColumnChange" bindscroll="bindScroll">
+<!-- <picker mode="region" bindchange="bindRegionChange" value="{{region}}" bindcolumnchange="bindColumnChange" bindscroll="bindScroll">
   <view class="picker">
     当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
 
     {{range}}
   </view>
 </picker>
+
+<button bindtap='selectAddress'>选择地址</button>
+
+<view class='list' wx:for="{{[1, 2, 3]}}">
+  <view class='list-title'>列表{{item}}</view>
+</view>
+
+<view bindtap='testTap'>Tap Test</view>
+
+<view class='line-height'><text>第一行\n第二行</text></view>
+
+<view class='view0'>测试border</view> -->
+
+<!-- <view class='view1'>
+  <text>文本</text>
+</view>
+
+<view class='view2'>
+  <view class='view2-sub0'>sub0</view>
+  <view class='view2-sub1'></view>
+</view>
+
+<view class='view3'>
+ <view class='view3-sub0'>view3-sub0</view>
+ <view class='view3-sub1'>view3-sub1</view>
+</view> -->
+
+<!-- <input class='input0' placeholder='请输入' cursor-spacing='50'></input> -->
+
+<view bindtap='changePage'>ChangePage</view>
+
+<custom bind:tap='myTap' data-item='item' />
+
+<view class='view11'>
+  <view class='view11-subview0'></view>
+</view>
+
+<picker mode="time">
+  <view>Time picker</view>
+</picker>
+
+<view bindtap='share'>Share</view>
+
+<!-- <view class='button-box'> -->
+  <button open-type='share' class='share-button'></button>
+<!-- </view> -->
+
+<picker-view class='myPicker' value='{{pickerList}}' bindchange='pickChange' bindpickend='pickEnd'>
+  <picker-view-column class='myColumn'>
+    <view wx:for="{{startHours}}" class='item'>{{item}}</view>
+  </picker-view-column>
+  <picker-view-column class='myColumn'>
+    <view wx:for="{{startMinutes}}" class='item'>{{item}}</view>
+  </picker-view-column>  
+</picker-view>

@@ -1,0 +1,24 @@
+<!--pages/page0/page0.wxml-->
+<text>pages/page0/page0.wxml</text>
+
+<view class='view0'>hi</view>
+
+<view class='view1'>
+  <view>2</view>
+  <view>2</view>
+  <view>4</view>
+</view>
+
+<scroll-view scroll-y='true' class='my-scroll-view'>
+  <view>2</view>
+  <!-- <view>2</view>
+  <view>4</view>
+  <view>2</view>
+  <view>2</view>
+  <view>4</view>
+  <view>2</view>
+  <view>2</view>
+  <view>4</view> -->
+</scroll-view>
+
+<input cursor-spacing='100' bindblur='blurAction' placeholder='Input'></input>
