@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "BWDemo2ViewController.h"
+#import "BWDemo3ViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+//    UIViewController *vc = [[BWDemo3ViewController alloc] init];
+    
+    UITabBarController *tabBarVC = [[UITabBarController alloc] init];
+    UINavigationController *demo2NvgtVC = [[UINavigationController alloc] initWithRootViewController:[BWDemo2ViewController new]];
+    UINavigationController *demo3NvgtVC = [[UINavigationController alloc] initWithRootViewController:[BWDemo3ViewController new]];
+    tabBarVC.viewControllers = @[demo2NvgtVC, demo3NvgtVC];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = tabBarVC;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

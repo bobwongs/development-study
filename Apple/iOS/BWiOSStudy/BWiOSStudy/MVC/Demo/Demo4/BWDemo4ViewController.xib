@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BWDemo4ViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6V-Ck-JKA">
+                    <rect key="frame" x="133" y="225" width="54" height="30"/>
+                    <state key="normal" title="Dismiss"/>
+                    <connections>
+                        <action selector="dismiss:" destination="-1" eventType="touchUpInside" id="L9T-7u-leP"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e45-My-j3h">
+                    <rect key="frame" x="133.5" y="285" width="53" height="30"/>
+                    <state key="normal" title="Present"/>
+                    <connections>
+                        <action selector="presentVC:" destination="-1" eventType="touchUpInside" id="4ZV-o9-zIb"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="e45-My-j3h" firstAttribute="top" secondItem="p6V-Ck-JKA" secondAttribute="bottom" constant="30" id="04I-X8-0QX"/>
+                <constraint firstItem="e45-My-j3h" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ttR-Gt-p8n"/>
+                <constraint firstItem="p6V-Ck-JKA" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="u77-au-M3d"/>
+                <constraint firstItem="p6V-Ck-JKA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yQL-NE-73v"/>
+            </constraints>
+            <point key="canvasLocation" x="178" y="68"/>
+        </view>
+    </objects>
+</document>

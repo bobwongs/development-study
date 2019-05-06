@@ -16,35 +16,58 @@ void test1(void);
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        
-//        id<BWCommonProtocol> object = [BWMessageSending new];
-//        [object test];
-        
-<<<<<<< HEAD
-//        NSDictionary *dict = @{@"url": @"https://www.baidu.com"};
-//        NSData *data = [NSJSONSerialization dataWithJSONObject:dict options:0 error:NULL];
-//        NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-//        NSLog(@"json string: %@", jsonString);
-//
-//        NSDictionary *newDict = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:0 error:NULL];
-//        NSLog(@"new dict: %@", newDict);
-        
-        NSString *string = @"     this text has spaces before and after ";
-        NSString *trimmedString = [string stringByTrimmingCharactersInSet:
-                                   [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-=======
 
-//        test0();
-        test1();
-        NSDictionary *dict = @{@"url": @"https://www.baidu.com"};
-        NSData *data = [NSJSONSerialization dataWithJSONObject:dict options:0 error:NULL];
-        NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        NSLog(@"json string: %@", jsonString);
->>>>>>> 8cb426c6d7fa5d2163966e857222118d6d737c05
+        NSString *str0 = @"hello world";
+        NSString *format = @"SELF contains 'world'";
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:format];
+        BOOL result = [predicate evaluateWithObject:str0];
+        NSLog(@"result: %@", @(result));
         
-        NSLog(@"original:\n%@", string);
-        NSLog(@"result:\n%@", trimmedString);
-        NSLog(@"\nMy String");
+NSDictionary *dict0 = @{@"time": @(12), @"name": @"first"};
+NSDictionary *dict1 = @{@"time": @(32), @"name": @"second"};
+NSArray *array = @[dict0, dict1];
+NSInteger limited = 20;
+NSString *filter0 = [NSString stringWithFormat:@"time > %@", @(limited)];
+NSString *filter1 = [NSString stringWithFormat:@"!name contains 's'"];
+NSString *format = [NSString stringWithFormat:@"%@ && %@", filter0, filter1];
+NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:format];
+
+NSArray *searchResults = [array filteredArrayUsingPredicate:resultPredicate];
+NSLog(@"searchResults: %@", searchResults);
+        
+        
+//        NSString *str0 = @"string0";
+//        NSArray *array = @[@"a-0"];
+//        NSArray *result = [@[str0] arrayByAddingObjectsFromArray:array];
+//        NSLog(@"result: %@", result);
+        
+//        NSMutableArray *array =
+//        [NSMutableArray arrayWithObjects:@"Bill", @"Ben", @"Chris", @"Melissa", nil];
+//
+//        NSPredicate *bPredicate =
+//        [NSPredicate predicateWithFormat:@"SELF beginswith[c] 'b'"];
+//        NSArray *beginWithB =
+//        [array filteredArrayUsingPredicate:bPredicate];
+//        // beginWithB contains { @"Bill", @"Ben" }.
+//
+//        NSPredicate *sPredicate = [NSPredicate predicateWithFormat:@"!SELF MATCHES[c] %@", @"Ben"];  // [c]: case case-insensitive
+//        NSArray *results = [array filteredArrayUsingPredicate:sPredicate];
+//
+//        NSLog(@"results: %@", results);
+        
+        
+//        NSArray *array = @[@"mike", @"jenny", @"bob"];
+////        NSString *filter = [NSString stringWithFormat:@"%K MATCHES %@"];
+////        NSString *filter = @"%@ = %@";
+//        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.%K MATCHES %@", @"jenny"];
+//        NSArray *result = [array filteredArrayUsingPredicate:predicate];
+        
+//        NSString* filter = @"%@ CONTAINS %@";
+//        NSPredicate* predicate = [NSPredicate predicateWithFormat:filter, @"SELF", @"a"];
+//        NSArray* result = [array filteredArrayUsingPredicate:predicate];
+        
+//        NSLog(@"array: %@", array);
+//        NSLog(@"result: %@", result);
         
     }
     return 0;

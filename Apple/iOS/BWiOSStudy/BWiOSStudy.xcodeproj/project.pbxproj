@@ -10,7 +10,13 @@
 		776739FF973CC27A63B231B7 /* libPods-BWiOSStudy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4C707CDD211F45D9886F75 /* libPods-BWiOSStudy.a */; };
 		AE6B5429C90416B1B8A92EC9 /* libPods-BWiOSStudyUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA38AC37AF8A6DA8AD347560 /* libPods-BWiOSStudyUITests.a */; };
 		B43B47C920275CC5001EF4DC /* BWAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B43B47C820275CC5001EF4DC /* BWAnimationViewController.m */; };
+		B464072B227589CE001455A0 /* BWDemo3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4640729227589CE001455A0 /* BWDemo3ViewController.m */; };
+		B464072C227589CE001455A0 /* BWDemo3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B464072A227589CE001455A0 /* BWDemo3ViewController.xib */; };
+		B4654D452277F8A600668550 /* BWDemo4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4654D432277F8A600668550 /* BWDemo4ViewController.m */; };
+		B4654D462277F8A600668550 /* BWDemo4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4654D442277F8A600668550 /* BWDemo4ViewController.xib */; };
 		B474F4A12179C8350040E1E1 /* BWDemo0VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B474F4A02179C8350040E1E1 /* BWDemo0VC.m */; };
+		B486968C22423E1200E238A3 /* BWDemo2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B486968A22423E1200E238A3 /* BWDemo2ViewController.m */; };
+		B486968D22423E1200E238A3 /* BWDemo2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B486968B22423E1200E238A3 /* BWDemo2ViewController.xib */; };
 		B4C1DF5E20BBFB91009FBAB1 /* BWStudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DF5D20BBFB91009FBAB1 /* BWStudyViewController.m */; };
 		B4C1DF6120BC03D9009FBAB1 /* BWiOSStudyUITestsSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DF6020BC03D9009FBAB1 /* BWiOSStudyUITestsSwift.swift */; };
 		B4D6843E1F7F3B1700C42934 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D6843D1F7F3B1700C42934 /* main.m */; };
@@ -27,6 +33,8 @@
 		B4D684891F7F4BEA00C42934 /* BWLayoutTest0View.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D684881F7F4BEA00C42934 /* BWLayoutTest0View.m */; };
 		B4ECABF421EF249100C47B1C /* BWDemo1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ECABF221EF249100C47B1C /* BWDemo1ViewController.m */; };
 		B4ECABF521EF249100C47B1C /* BWDemo1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4ECABF321EF249100C47B1C /* BWDemo1ViewController.xib */; };
+		B4F19EC42272EFA3004ADD37 /* BWDemo2HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F19EC32272EFA3004ADD37 /* BWDemo2HeaderView.m */; };
+		B4F19EC62272EFAC004ADD37 /* BWDemo2HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4F19EC52272EFAC004ADD37 /* BWDemo2HeaderView.xib */; };
 		C25813129B9FFF1DEC80CBDA /* libPods-BWiOSStudyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B72EB7096B6A9B237F257B /* libPods-BWiOSStudyTests.a */; };
 /* End PBXBuildFile section */
 
@@ -54,8 +62,17 @@
 		AA38AC37AF8A6DA8AD347560 /* libPods-BWiOSStudyUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BWiOSStudyUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43B47C720275CC5001EF4DC /* BWAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWAnimationViewController.h; sourceTree = "<group>"; };
 		B43B47C820275CC5001EF4DC /* BWAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWAnimationViewController.m; sourceTree = "<group>"; };
+		B4640728227589CE001455A0 /* BWDemo3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDemo3ViewController.h; sourceTree = "<group>"; };
+		B4640729227589CE001455A0 /* BWDemo3ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDemo3ViewController.m; sourceTree = "<group>"; };
+		B464072A227589CE001455A0 /* BWDemo3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWDemo3ViewController.xib; sourceTree = "<group>"; };
+		B4654D422277F8A600668550 /* BWDemo4ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDemo4ViewController.h; sourceTree = "<group>"; };
+		B4654D432277F8A600668550 /* BWDemo4ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDemo4ViewController.m; sourceTree = "<group>"; };
+		B4654D442277F8A600668550 /* BWDemo4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWDemo4ViewController.xib; sourceTree = "<group>"; };
 		B474F49F2179C8350040E1E1 /* BWDemo0VC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDemo0VC.h; sourceTree = "<group>"; };
 		B474F4A02179C8350040E1E1 /* BWDemo0VC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDemo0VC.m; sourceTree = "<group>"; };
+		B486968922423E1200E238A3 /* BWDemo2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDemo2ViewController.h; sourceTree = "<group>"; };
+		B486968A22423E1200E238A3 /* BWDemo2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDemo2ViewController.m; sourceTree = "<group>"; };
+		B486968B22423E1200E238A3 /* BWDemo2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWDemo2ViewController.xib; sourceTree = "<group>"; };
 		B4C1DF5C20BBFB91009FBAB1 /* BWStudyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWStudyViewController.h; sourceTree = "<group>"; };
 		B4C1DF5D20BBFB91009FBAB1 /* BWStudyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWStudyViewController.m; sourceTree = "<group>"; };
 		B4C1DF5F20BC03D8009FBAB1 /* BWiOSStudyUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BWiOSStudyUITests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -88,6 +105,9 @@
 		B4ECABF121EF249100C47B1C /* BWDemo1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDemo1ViewController.h; sourceTree = "<group>"; };
 		B4ECABF221EF249100C47B1C /* BWDemo1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDemo1ViewController.m; sourceTree = "<group>"; };
 		B4ECABF321EF249100C47B1C /* BWDemo1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWDemo1ViewController.xib; sourceTree = "<group>"; };
+		B4F19EC22272EFA3004ADD37 /* BWDemo2HeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDemo2HeaderView.h; sourceTree = "<group>"; };
+		B4F19EC32272EFA3004ADD37 /* BWDemo2HeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDemo2HeaderView.m; sourceTree = "<group>"; };
+		B4F19EC52272EFAC004ADD37 /* BWDemo2HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWDemo2HeaderView.xib; sourceTree = "<group>"; };
 		BC4C707CDD211F45D9886F75 /* libPods-BWiOSStudy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BWiOSStudy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6B72EB7096B6A9B237F257B /* libPods-BWiOSStudyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BWiOSStudyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB96689141B2F001E7AFEC2D /* Pods-BWiOSStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWiOSStudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWiOSStudy/Pods-BWiOSStudy.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,13 +168,55 @@
 			path = CAAnimation;
 			sourceTree = "<group>";
 		};
+		B4640727227589B7001455A0 /* Demo3 */ = {
+			isa = PBXGroup;
+			children = (
+				B464072D22758AAF001455A0 /* Resource */,
+				B4640728227589CE001455A0 /* BWDemo3ViewController.h */,
+				B4640729227589CE001455A0 /* BWDemo3ViewController.m */,
+				B464072A227589CE001455A0 /* BWDemo3ViewController.xib */,
+			);
+			path = Demo3;
+			sourceTree = "<group>";
+		};
+		B464072D22758AAF001455A0 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		B4654D412277F89200668550 /* Demo4 */ = {
+			isa = PBXGroup;
+			children = (
+				B4654D422277F8A600668550 /* BWDemo4ViewController.h */,
+				B4654D432277F8A600668550 /* BWDemo4ViewController.m */,
+				B4654D442277F8A600668550 /* BWDemo4ViewController.xib */,
+			);
+			path = Demo4;
+			sourceTree = "<group>";
+		};
 		B474F49E2179C81E0040E1E1 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				B4654D412277F89200668550 /* Demo4 */,
+				B4640727227589B7001455A0 /* Demo3 */,
+				B486968322423C7100E238A3 /* Demo2 */,
 				B474F49F2179C8350040E1E1 /* BWDemo0VC.h */,
 				B474F4A02179C8350040E1E1 /* BWDemo0VC.m */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		B486968322423C7100E238A3 /* Demo2 */ = {
+			isa = PBXGroup;
+			children = (
+				B4F19EC12272EF8E004ADD37 /* View */,
+				B486968922423E1200E238A3 /* BWDemo2ViewController.h */,
+				B486968A22423E1200E238A3 /* BWDemo2ViewController.m */,
+				B486968B22423E1200E238A3 /* BWDemo2ViewController.xib */,
+			);
+			path = Demo2;
 			sourceTree = "<group>";
 		};
 		B4B91E9720C66AF700DB6F45 /* Database */ = {
@@ -311,6 +373,16 @@
 			path = Demo1;
 			sourceTree = "<group>";
 		};
+		B4F19EC12272EF8E004ADD37 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4F19EC22272EFA3004ADD37 /* BWDemo2HeaderView.h */,
+				B4F19EC32272EFA3004ADD37 /* BWDemo2HeaderView.m */,
+				B4F19EC52272EFAC004ADD37 /* BWDemo2HeaderView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FB3D54E06C428BBA58FCE0B6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,8 +482,7 @@
 				TargetAttributes = {
 					B4D684381F7F3B1700C42934 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = V3E8GUFW32;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					B4D684511F7F3B1700C42934 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -454,8 +525,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4ECABF521EF249100C47B1C /* BWDemo1ViewController.xib in Resources */,
+				B486968D22423E1200E238A3 /* BWDemo2ViewController.xib in Resources */,
 				B4D6844C1F7F3B1700C42934 /* LaunchScreen.storyboard in Resources */,
+				B4654D462277F8A600668550 /* BWDemo4ViewController.xib in Resources */,
 				B4D684491F7F3B1700C42934 /* Assets.xcassets in Resources */,
+				B464072C227589CE001455A0 /* BWDemo3ViewController.xib in Resources */,
+				B4F19EC62272EFAC004ADD37 /* BWDemo2HeaderView.xib in Resources */,
 				B4D684471F7F3B1700C42934 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -629,13 +704,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4ECABF421EF249100C47B1C /* BWDemo1ViewController.m in Sources */,
+				B486968C22423E1200E238A3 /* BWDemo2ViewController.m in Sources */,
 				B4D684891F7F4BEA00C42934 /* BWLayoutTest0View.m in Sources */,
 				B4D684821F7F442600C42934 /* BWHomeTableViewController.m in Sources */,
+				B4654D452277F8A600668550 /* BWDemo4ViewController.m in Sources */,
 				B4D684851F7F477A00C42934 /* BWLayoutViewController.m in Sources */,
 				B4D684411F7F3B1700C42934 /* AppDelegate.m in Sources */,
 				B4D6847B1F7F426000C42934 /* BWConstraintsController.m in Sources */,
+				B4F19EC42272EFA3004ADD37 /* BWDemo2HeaderView.m in Sources */,
 				B4D6847C1F7F426000C42934 /* BWFrameController.m in Sources */,
 				B43B47C920275CC5001EF4DC /* BWAnimationViewController.m in Sources */,
+				B464072B227589CE001455A0 /* BWDemo3ViewController.m in Sources */,
 				B474F4A12179C8350040E1E1 /* BWDemo0VC.m in Sources */,
 				B4D6843E1F7F3B1700C42934 /* main.m in Sources */,
 				B4C1DF5E20BBFB91009FBAB1 /* BWStudyViewController.m in Sources */,
@@ -789,13 +868,15 @@
 			baseConfigurationReference = F34666BB70773A7AC582C31A /* Pods-BWiOSStudy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = V3E8GUFW32;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = BWiOSStudy/BWiOSStudy.pch;
 				INFOPLIST_FILE = BWiOSStudy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bws.BWiOSStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -804,13 +885,15 @@
 			baseConfigurationReference = EB96689141B2F001E7AFEC2D /* Pods-BWiOSStudy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = V3E8GUFW32;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = BWiOSStudy/BWiOSStudy.pch;
 				INFOPLIST_FILE = BWiOSStudy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bws.BWiOSStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
