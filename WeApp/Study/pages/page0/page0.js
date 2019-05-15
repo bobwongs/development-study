@@ -27,6 +27,14 @@ Page({
     console.log('text: ' + text)
   },
 
+  testTap() {
+    wx.showModal({
+      title: 'hi',
+      // content: 'yes',
+      showCancel: false
+    })
+  },
+
   checkInfo() {
     let check = () => {
       // let { angelInfo, baseInfo, bankInfo, otherInfo, orgInfo } = this.data

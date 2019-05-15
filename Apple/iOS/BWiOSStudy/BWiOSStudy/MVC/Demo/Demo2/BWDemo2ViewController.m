@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *longSpace;
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
-
+、
 @end
 
 @implementation BWDemo2ViewController

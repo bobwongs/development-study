@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4574D20228180F4004F1B85 /* BWDemo0Class.m in Sources */ = {isa = PBXBuildFile; fileRef = B4574D1F228180F4004F1B85 /* BWDemo0Class.m */; };
 		B4C1DEC820BB9D39009FBAB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DEC720BB9D39009FBAB1 /* main.m */; };
 		B4C1DEFF20BBABCA009FBAB1 /* BWMessageSending.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DEFE20BBABCA009FBAB1 /* BWMessageSending.m */; };
 		B4C1DF0220BBAC13009FBAB1 /* BWRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DF0120BBAC13009FBAB1 /* BWRuntime.m */; };
@@ -27,6 +28,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B4574D1E228180F4004F1B85 /* BWDemo0Class.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDemo0Class.h; sourceTree = "<group>"; };
+		B4574D1F228180F4004F1B85 /* BWDemo0Class.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDemo0Class.m; sourceTree = "<group>"; };
 		B4C1DEC420BB9D39009FBAB1 /* BWObjective-CStudy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "BWObjective-CStudy"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C1DEC720BB9D39009FBAB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B4C1DECF20BB9D72009FBAB1 /* BWToDoItem+BWAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BWToDoItem+BWAdd.h"; sourceTree = "<group>"; };
@@ -64,6 +67,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B4574D1C228180B0004F1B85 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				B4574D1D228180D5004F1B85 /* Demo0 */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		B4574D1D228180D5004F1B85 /* Demo0 */ = {
+			isa = PBXGroup;
+			children = (
+				B4574D1E228180F4004F1B85 /* BWDemo0Class.h */,
+				B4574D1F228180F4004F1B85 /* BWDemo0Class.m */,
+			);
+			path = Demo0;
+			sourceTree = "<group>";
+		};
 		B4C1DEBB20BB9D39009FBAB1 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +111,7 @@
 				B4C1DECE20BB9D72009FBAB1 /* Runtime */,
 				B4C1DEF920BBAB8C009FBAB1 /* MessageSending */,
 				B4C1DF1720BBE1F9009FBAB1 /* Testing */,
+				B4574D1C228180B0004F1B85 /* Demo */,
 			);
 			path = "BWObjective-CStudy";
 			sourceTree = "<group>";
@@ -242,6 +263,7 @@
 			files = (
 				B4C1DEC820BB9D39009FBAB1 /* main.m in Sources */,
 				B4C1DF0220BBAC13009FBAB1 /* BWRuntime.m in Sources */,
+				B4574D20228180F4004F1B85 /* BWDemo0Class.m in Sources */,
 				B4C1DEFF20BBABCA009FBAB1 /* BWMessageSending.m in Sources */,
 				B4C1DF1A20BBE23D009FBAB1 /* BWCounter.m in Sources */,
 			);
