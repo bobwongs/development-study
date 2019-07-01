@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B4574D20228180F4004F1B85 /* BWDemo0Class.m in Sources */ = {isa = PBXBuildFile; fileRef = B4574D1F228180F4004F1B85 /* BWDemo0Class.m */; };
+		B47A9F3522BC845F0036A5B2 /* BWPersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B47A9F3422BC845F0036A5B2 /* BWPersonModel.m */; };
 		B4C1DEC820BB9D39009FBAB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DEC720BB9D39009FBAB1 /* main.m */; };
 		B4C1DEFF20BBABCA009FBAB1 /* BWMessageSending.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DEFE20BBABCA009FBAB1 /* BWMessageSending.m */; };
 		B4C1DF0220BBAC13009FBAB1 /* BWRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DF0120BBAC13009FBAB1 /* BWRuntime.m */; };
@@ -30,6 +31,8 @@
 /* Begin PBXFileReference section */
 		B4574D1E228180F4004F1B85 /* BWDemo0Class.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDemo0Class.h; sourceTree = "<group>"; };
 		B4574D1F228180F4004F1B85 /* BWDemo0Class.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDemo0Class.m; sourceTree = "<group>"; };
+		B47A9F3322BC845F0036A5B2 /* BWPersonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWPersonModel.h; sourceTree = "<group>"; };
+		B47A9F3422BC845F0036A5B2 /* BWPersonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWPersonModel.m; sourceTree = "<group>"; };
 		B4C1DEC420BB9D39009FBAB1 /* BWObjective-CStudy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "BWObjective-CStudy"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C1DEC720BB9D39009FBAB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B4C1DECF20BB9D72009FBAB1 /* BWToDoItem+BWAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BWToDoItem+BWAdd.h"; sourceTree = "<group>"; };
@@ -70,6 +73,7 @@
 		B4574D1C228180B0004F1B85 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				B47A9F3222BC84410036A5B2 /* Model */,
 				B4574D1D228180D5004F1B85 /* Demo0 */,
 			);
 			path = Demo;
@@ -82,6 +86,15 @@
 				B4574D1F228180F4004F1B85 /* BWDemo0Class.m */,
 			);
 			path = Demo0;
+			sourceTree = "<group>";
+		};
+		B47A9F3222BC84410036A5B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B47A9F3322BC845F0036A5B2 /* BWPersonModel.h */,
+				B47A9F3422BC845F0036A5B2 /* BWPersonModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B4C1DEBB20BB9D39009FBAB1 = {
@@ -262,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4C1DEC820BB9D39009FBAB1 /* main.m in Sources */,
+				B47A9F3522BC845F0036A5B2 /* BWPersonModel.m in Sources */,
 				B4C1DF0220BBAC13009FBAB1 /* BWRuntime.m in Sources */,
 				B4574D20228180F4004F1B85 /* BWDemo0Class.m in Sources */,
 				B4C1DEFF20BBABCA009FBAB1 /* BWMessageSending.m in Sources */,

@@ -3,6 +3,7 @@ platform :ios, '8.0'
 target 'BWiOSStudy' do
 
   pod 'Masonry', '~> 1.1.0'
+  pod 'MJExtension', '3.0.15.1'
 
   target 'BWiOSStudyTests' do
     inherit! :search_paths

@@ -11,9 +11,13 @@
 #import "BWMessageSending.h"
 #import "BWCommonProtocol.h"
 #import "BWDemo0Class.h"
+#include <stdlib.h>
+#import "BWPersonModel.h"
+//#import <MJExtension.h>
 
 void test0(void);
 void test1(void);
+void test2(void);
 
 typedef NS_ENUM(NSInteger, StudentType) {
     Male,
@@ -22,12 +26,46 @@ typedef NS_ENUM(NSInteger, StudentType) {
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-
-        NSLog(@"%@", @(Male));
         
-        BWDemo0Class *demo0 = [BWDemo0Class new];
-//        demo0.name = @"hi";
-        NSLog(@"%@", @(demo0.count));
+        
+        
+        
+//        BWPersonModel *model = [BWPersonModel mj_objectWithKeyValues:nil];
+//        NSLog(@"model: %@, %@", model.name, model.country);
+        
+//        BWPersonModel *model = [BWPersonModel new];
+//        model.name = @"32";
+//        model.country = @"23";
+//
+//        __block BOOL valid = YES;
+//        NSArray *array = @[@"name", @"country"];
+//        [array enumerateObjectsUsingBlock:^(NSString * _Nonnull key, NSUInteger idx, BOOL * _Nonnull stop) {
+//            id value = [model valueForKey:key];
+//            if (!value) {
+//                valid = NO;
+//                *stop = YES;
+//            }
+//            if ([value isKindOfClass:[NSString class]]) {
+//                BOOL validValue = ((NSString *)value).length;
+//                if (!validValue) {
+//                    valid = NO;
+//                    *stop = YES;
+//                }
+//            }
+//        }];
+//
+//        NSLog(@"valid: %@", @(valid));
+        
+        
+//        for (NSInteger i = 0; i < 10; i++) {
+//            NSLog(@"%@", @(arc4random_uniform(10)));
+//        }
+        
+//        test2();
+
+//        BWDemo0Class *demo0 = [BWDemo0Class new];
+////        demo0.name = @"hi";
+//        NSLog(@"%@", @(demo0.count));
 
     }
     return 0;
@@ -35,23 +73,23 @@ int main(int argc, const char * argv[]) {
 
 // Predicate
 void test2() {
-    NSString *str0 = @"hello world";
-    NSString *format = @"SELF contains 'world'";
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:format];
-    BOOL result = [predicate evaluateWithObject:str0];
-    NSLog(@"result: %@", @(result));
+//    NSString *str0 = @"hello world";
+//    NSString *format = @"SELF contains 'world'";
+//    NSPredicate *predicate = [NSPredicate predicateWithFormat:format];
+//    BOOL result = [predicate evaluateWithObject:str0];
+//    NSLog(@"result: %@", @(result));
 
-//    NSDictionary *dict0 = @{@"time": @(12), @"name": @"first"};
-//    NSDictionary *dict1 = @{@"time": @(32), @"name": @"second"};
-//    NSArray *array = @[dict0, dict1];
-//    NSInteger limited = 20;
-//    NSString *filter0 = [NSString stringWithFormat:@"time > %@", @(limited)];
-//    NSString *filter1 = [NSString stringWithFormat:@"!name contains 's'"];
-//    NSString *format = [NSString stringWithFormat:@"%@ && %@", filter0, filter1];
-//    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:format];
-//
-//    NSArray *searchResults = [array filteredArrayUsingPredicate:resultPredicate];
-//    NSLog(@"searchResults: %@", searchResults);
+    NSDictionary *dict0 = @{@"time": @(12), @"name": @"first"};
+    NSDictionary *dict1 = @{@"time": @(32), @"name": @"second"};
+    NSArray *array = @[dict0, dict1];
+    NSInteger limited = 20;
+    NSString *filter0 = [NSString stringWithFormat:@"time - 10 > %@", @(limited)];
+    NSString *filter1 = [NSString stringWithFormat:@"name contains 's'"];
+    NSString *format = [NSString stringWithFormat:@"%@ && %@", filter0, filter1];
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:format];
+
+    NSArray *searchResults = [array filteredArrayUsingPredicate:resultPredicate];
+    NSLog(@"searchResults: %@", searchResults);
 
 
 //    NSString *str0 = @"string0";

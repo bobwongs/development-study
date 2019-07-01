@@ -9,8 +9,13 @@
 #import "AppDelegate.h"
 #import "BWDemo2ViewController.h"
 #import "BWDemo3ViewController.h"
+#import "BWDemo2Sub0View.h"
+#import <MJExtension.h>
+#import "BWPersonModel.h"
 
 @interface AppDelegate ()
+
+@property (strong, nonatomic) BWDemo2ViewController *demo2VC;
 
 @end
 
@@ -20,19 +25,54 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 //    UIViewController *vc = [[BWDemo3ViewController alloc] init];
     
+    BWPersonModel *model = [BWPersonModel mj_objectWithKeyValues:@{}];
+    NSLog(@"model: %@", model);
+    NSLog(@"model: %@, %@", model.name, model.country);
+    
+    BWDemo2ViewController *demo2VC = [BWDemo2ViewController new];
+    self.demo2VC = demo2VC;
+    
     UITabBarController *tabBarVC = [[UITabBarController alloc] init];
-    UINavigationController *demo2NvgtVC = [[UINavigationController alloc] initWithRootViewController:[BWDemo2ViewController new]];
+    UINavigationController *demo2NvgtVC = [[UINavigationController alloc] initWithRootViewController:demo2VC];
     UINavigationController *demo3NvgtVC = [[UINavigationController alloc] initWithRootViewController:[BWDemo3ViewController new]];
-    tabBarVC.viewControllers = @[demo2NvgtVC, demo3NvgtVC];
+    tabBarVC.viewControllers = @[demo3NvgtVC, demo2NvgtVC];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = tabBarVC;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+    
+    
+    /* ---------- Quic Test ---------- */
+    
+    UINib *nib = [UINib nibWithNibName:NSStringFromClass([BWDemo2Sub0View class]) bundle:nil];
+    NSArray *array = [nib instantiateWithOwner:nil options:nil];
+    NSLog(@"nib: %@", nib);
+    NSLog(@"array: %@", array);
+    
+    /* ---------- Quic Test ---------- */
+    
     return YES;
 }
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    self.demo2VC.log = [NSString stringWithFormat:@"source: %@", url.absoluteString];
+    
+    return YES;
+}
+
+
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url options:(nonnull NSDictionary<NSString *,id> *)options{
+    self.demo2VC.log = [NSString stringWithFormat:@"options: %@", url.absoluteString];
+    
+    NSLog(@"query: %@", url.query);
+    NSLog(@"host + path: %@%@", url.host, url.path);
+    NSLog(@"scheme: %@", url.scheme);
+    
+    return YES;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

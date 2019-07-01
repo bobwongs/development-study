@@ -14,7 +14,12 @@
 		B464072C227589CE001455A0 /* BWDemo3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B464072A227589CE001455A0 /* BWDemo3ViewController.xib */; };
 		B4654D452277F8A600668550 /* BWDemo4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4654D432277F8A600668550 /* BWDemo4ViewController.m */; };
 		B4654D462277F8A600668550 /* BWDemo4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4654D442277F8A600668550 /* BWDemo4ViewController.xib */; };
+		B46DEA5E229D057800DAF99C /* BWDemo2Sub0View.m in Sources */ = {isa = PBXBuildFile; fileRef = B46DEA5D229D057800DAF99C /* BWDemo2Sub0View.m */; };
+		B46DEA60229D058500DAF99C /* BWDemo2Sub0View.xib in Resources */ = {isa = PBXBuildFile; fileRef = B46DEA5F229D058500DAF99C /* BWDemo2Sub0View.xib */; };
 		B474F4A12179C8350040E1E1 /* BWDemo0VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B474F4A02179C8350040E1E1 /* BWDemo0VC.m */; };
+		B47A9F4122BCA2A40036A5B2 /* BWPersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B47A9F4022BCA2A40036A5B2 /* BWPersonModel.m */; };
+		B481385B229FBF8B009A110B /* BWDemo3TableView0Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4813859229FBF8B009A110B /* BWDemo3TableView0Cell.m */; };
+		B481385C229FBF8B009A110B /* BWDemo3TableView0Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B481385A229FBF8B009A110B /* BWDemo3TableView0Cell.xib */; };
 		B486968C22423E1200E238A3 /* BWDemo2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B486968A22423E1200E238A3 /* BWDemo2ViewController.m */; };
 		B486968D22423E1200E238A3 /* BWDemo2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B486968B22423E1200E238A3 /* BWDemo2ViewController.xib */; };
 		B4C1DF5E20BBFB91009FBAB1 /* BWStudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DF5D20BBFB91009FBAB1 /* BWStudyViewController.m */; };
@@ -68,8 +73,16 @@
 		B4654D422277F8A600668550 /* BWDemo4ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDemo4ViewController.h; sourceTree = "<group>"; };
 		B4654D432277F8A600668550 /* BWDemo4ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDemo4ViewController.m; sourceTree = "<group>"; };
 		B4654D442277F8A600668550 /* BWDemo4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWDemo4ViewController.xib; sourceTree = "<group>"; };
+		B46DEA5C229D057800DAF99C /* BWDemo2Sub0View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDemo2Sub0View.h; sourceTree = "<group>"; };
+		B46DEA5D229D057800DAF99C /* BWDemo2Sub0View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDemo2Sub0View.m; sourceTree = "<group>"; };
+		B46DEA5F229D058500DAF99C /* BWDemo2Sub0View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWDemo2Sub0View.xib; sourceTree = "<group>"; };
 		B474F49F2179C8350040E1E1 /* BWDemo0VC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDemo0VC.h; sourceTree = "<group>"; };
 		B474F4A02179C8350040E1E1 /* BWDemo0VC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDemo0VC.m; sourceTree = "<group>"; };
+		B47A9F3F22BCA2A40036A5B2 /* BWPersonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWPersonModel.h; sourceTree = "<group>"; };
+		B47A9F4022BCA2A40036A5B2 /* BWPersonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWPersonModel.m; sourceTree = "<group>"; };
+		B4813858229FBF8B009A110B /* BWDemo3TableView0Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDemo3TableView0Cell.h; sourceTree = "<group>"; };
+		B4813859229FBF8B009A110B /* BWDemo3TableView0Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDemo3TableView0Cell.m; sourceTree = "<group>"; };
+		B481385A229FBF8B009A110B /* BWDemo3TableView0Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWDemo3TableView0Cell.xib; sourceTree = "<group>"; };
 		B486968922423E1200E238A3 /* BWDemo2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDemo2ViewController.h; sourceTree = "<group>"; };
 		B486968A22423E1200E238A3 /* BWDemo2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDemo2ViewController.m; sourceTree = "<group>"; };
 		B486968B22423E1200E238A3 /* BWDemo2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWDemo2ViewController.xib; sourceTree = "<group>"; };
@@ -171,6 +184,7 @@
 		B4640727227589B7001455A0 /* Demo3 */ = {
 			isa = PBXGroup;
 			children = (
+				B4813857229FBF75009A110B /* View */,
 				B464072D22758AAF001455A0 /* Resource */,
 				B4640728227589CE001455A0 /* BWDemo3ViewController.h */,
 				B4640729227589CE001455A0 /* BWDemo3ViewController.m */,
@@ -189,11 +203,22 @@
 		B4654D412277F89200668550 /* Demo4 */ = {
 			isa = PBXGroup;
 			children = (
+				B4775A582296947900EAD3B7 /* Resource */,
 				B4654D422277F8A600668550 /* BWDemo4ViewController.h */,
 				B4654D432277F8A600668550 /* BWDemo4ViewController.m */,
 				B4654D442277F8A600668550 /* BWDemo4ViewController.xib */,
 			);
 			path = Demo4;
+			sourceTree = "<group>";
+		};
+		B46DEA5B229D055A00DAF99C /* Demo2Subview0 */ = {
+			isa = PBXGroup;
+			children = (
+				B46DEA5C229D057800DAF99C /* BWDemo2Sub0View.h */,
+				B46DEA5D229D057800DAF99C /* BWDemo2Sub0View.m */,
+				B46DEA5F229D058500DAF99C /* BWDemo2Sub0View.xib */,
+			);
+			path = Demo2Subview0;
 			sourceTree = "<group>";
 		};
 		B474F49E2179C81E0040E1E1 /* Demo */ = {
@@ -206,6 +231,32 @@
 				B474F4A02179C8350040E1E1 /* BWDemo0VC.m */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		B4775A582296947900EAD3B7 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		B47A9F3E22BCA2970036A5B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B47A9F3F22BCA2A40036A5B2 /* BWPersonModel.h */,
+				B47A9F4022BCA2A40036A5B2 /* BWPersonModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B4813857229FBF75009A110B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4813858229FBF8B009A110B /* BWDemo3TableView0Cell.h */,
+				B4813859229FBF8B009A110B /* BWDemo3TableView0Cell.m */,
+				B481385A229FBF8B009A110B /* BWDemo3TableView0Cell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B486968322423C7100E238A3 /* Demo2 */ = {
@@ -305,6 +356,7 @@
 		B4D6846F1F7F3BE900C42934 /* MVC */ = {
 			isa = PBXGroup;
 			children = (
+				B47A9F3E22BCA2970036A5B2 /* Model */,
 				B4C1DF5B20BBFB7B009FBAB1 /* Study */,
 				B4D684701F7F426000C42934 /* Home */,
 				B4D684711F7F426000C42934 /* Layout */,
@@ -376,6 +428,7 @@
 		B4F19EC12272EF8E004ADD37 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B46DEA5B229D055A00DAF99C /* Demo2Subview0 */,
 				B4F19EC22272EFA3004ADD37 /* BWDemo2HeaderView.h */,
 				B4F19EC32272EFA3004ADD37 /* BWDemo2HeaderView.m */,
 				B4F19EC52272EFAC004ADD37 /* BWDemo2HeaderView.xib */,
@@ -417,8 +470,6 @@
 				B4D684351F7F3B1700C42934 /* Sources */,
 				B4D684361F7F3B1700C42934 /* Frameworks */,
 				B4D684371F7F3B1700C42934 /* Resources */,
-				C704E7B337540399EC98BE52 /* [CP] Embed Pods Frameworks */,
-				C840A443DB2FD5C55EBF3AB6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -437,8 +488,6 @@
 				B4D6844E1F7F3B1700C42934 /* Sources */,
 				B4D6844F1F7F3B1700C42934 /* Frameworks */,
 				B4D684501F7F3B1700C42934 /* Resources */,
-				786669177D7DF23AF8223DCC /* [CP] Embed Pods Frameworks */,
-				373BB02F62A7B87EF0461345 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -458,8 +507,6 @@
 				B4D684591F7F3B1700C42934 /* Sources */,
 				B4D6845A1F7F3B1700C42934 /* Frameworks */,
 				B4D6845B1F7F3B1700C42934 /* Resources */,
-				6D8A5F3B4E6C1C0B319405CC /* [CP] Embed Pods Frameworks */,
-				FA4E5C45C1FF3F9B9AF55619 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -504,6 +551,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -528,10 +576,12 @@
 				B486968D22423E1200E238A3 /* BWDemo2ViewController.xib in Resources */,
 				B4D6844C1F7F3B1700C42934 /* LaunchScreen.storyboard in Resources */,
 				B4654D462277F8A600668550 /* BWDemo4ViewController.xib in Resources */,
+				B481385C229FBF8B009A110B /* BWDemo3TableView0Cell.xib in Resources */,
 				B4D684491F7F3B1700C42934 /* Assets.xcassets in Resources */,
 				B464072C227589CE001455A0 /* BWDemo3ViewController.xib in Resources */,
 				B4F19EC62272EFAC004ADD37 /* BWDemo2HeaderView.xib in Resources */,
 				B4D684471F7F3B1700C42934 /* Main.storyboard in Resources */,
+				B46DEA60229D058500DAF99C /* BWDemo2Sub0View.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,21 +620,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		373BB02F62A7B87EF0461345 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BWiOSStudyTests/Pods-BWiOSStudyTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6103BD84D0D60A0CB5918B49 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -601,66 +636,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6D8A5F3B4E6C1C0B319405CC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BWiOSStudyUITests/Pods-BWiOSStudyUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		786669177D7DF23AF8223DCC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BWiOSStudyTests/Pods-BWiOSStudyTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C704E7B337540399EC98BE52 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BWiOSStudy/Pods-BWiOSStudy-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C840A443DB2FD5C55EBF3AB6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BWiOSStudy/Pods-BWiOSStudy-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F87EB2C445A50C1B93CBFBB9 /* [CP] Check Pods Manifest.lock */ = {
@@ -681,21 +656,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FA4E5C45C1FF3F9B9AF55619 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BWiOSStudyUITests/Pods-BWiOSStudyUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -704,6 +664,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4ECABF421EF249100C47B1C /* BWDemo1ViewController.m in Sources */,
+				B46DEA5E229D057800DAF99C /* BWDemo2Sub0View.m in Sources */,
 				B486968C22423E1200E238A3 /* BWDemo2ViewController.m in Sources */,
 				B4D684891F7F4BEA00C42934 /* BWLayoutTest0View.m in Sources */,
 				B4D684821F7F442600C42934 /* BWHomeTableViewController.m in Sources */,
@@ -714,6 +675,8 @@
 				B4F19EC42272EFA3004ADD37 /* BWDemo2HeaderView.m in Sources */,
 				B4D6847C1F7F426000C42934 /* BWFrameController.m in Sources */,
 				B43B47C920275CC5001EF4DC /* BWAnimationViewController.m in Sources */,
+				B481385B229FBF8B009A110B /* BWDemo3TableView0Cell.m in Sources */,
+				B47A9F4122BCA2A40036A5B2 /* BWPersonModel.m in Sources */,
 				B464072B227589CE001455A0 /* BWDemo3ViewController.m in Sources */,
 				B474F4A12179C8350040E1E1 /* BWDemo0VC.m in Sources */,
 				B4D6843E1F7F3B1700C42934 /* main.m in Sources */,
@@ -872,7 +835,7 @@
 				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = BWiOSStudy/BWiOSStudy.pch;
 				INFOPLIST_FILE = BWiOSStudy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bws.BWiOSStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -889,7 +852,7 @@
 				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = BWiOSStudy/BWiOSStudy.pch;
 				INFOPLIST_FILE = BWiOSStudy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bws.BWiOSStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";

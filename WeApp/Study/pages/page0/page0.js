@@ -8,10 +8,23 @@ Page({
 
   },
 
+  sayHi() {
+    // console.log('say hi')
+    let a = 1
+    let b = '01'
+    if (a == b) {
+      console.log('=')
+    } else {
+      console.log('not =')
+    }
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.sayHi(false)
+
     // wx.getSystemInfo({
     //   success: function(res) {
     //     console.log('res: ' + JSON.stringify(res))
@@ -23,8 +36,8 @@ Page({
 
     // this.checkInfo()
 
-    let text = 120 / 10.0 + 'km'
-    console.log('text: ' + text)
+    // let text = 120 / 10.0 + 'km'
+    // console.log('text: ' + text)
   },
 
   testTap() {

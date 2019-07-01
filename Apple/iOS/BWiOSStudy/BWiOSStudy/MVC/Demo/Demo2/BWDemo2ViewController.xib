@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BWDemo2ViewController">
             <connections>
                 <outlet property="button0" destination="L0f-Eq-ksx" id="okc-sh-2Is"/>
+                <outlet property="logTextView" destination="JYA-ev-pkL" id="pu5-4y-Wgc"/>
                 <outlet property="longSpace" destination="wnQ-rl-RCm" id="FjT-9q-IHS"/>
                 <outlet property="tableView" destination="quK-ud-oaR" id="ay3-9Y-wHg"/>
                 <outlet property="textField" destination="ZcU-uM-WiB" id="3hO-MN-Sl6"/>
@@ -68,15 +69,28 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JYA-ev-pkL">
+                    <rect key="frame" x="20" y="258.5" width="335" height="150"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="fY2-fl-b0R"/>
+                    </constraints>
+                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="JYA-ev-pkL" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="23O-B7-nIU"/>
                 <constraint firstItem="L0f-Eq-ksx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2lK-97-9z7"/>
                 <constraint firstItem="quK-ud-oaR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="I1l-nl-9ns"/>
                 <constraint firstItem="ZcU-uM-WiB" firstAttribute="top" secondItem="quK-ud-oaR" secondAttribute="bottom" constant="20" id="JCA-Pf-Czu"/>
                 <constraint firstItem="quK-ud-oaR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="NsV-Ok-PwQ"/>
                 <constraint firstItem="ZcU-uM-WiB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="UWs-nJ-XVs"/>
                 <constraint firstAttribute="trailing" secondItem="quK-ud-oaR" secondAttribute="trailing" id="cm7-sB-0AN"/>
+                <constraint firstAttribute="trailing" secondItem="JYA-ev-pkL" secondAttribute="trailing" constant="20" id="h4a-IR-kqC"/>
+                <constraint firstItem="JYA-ev-pkL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="jAj-1R-WIP"/>
                 <constraint firstItem="L0f-Eq-ksx" firstAttribute="top" secondItem="quK-ud-oaR" secondAttribute="bottom" constant="200" id="wnQ-rl-RCm"/>
             </constraints>
             <point key="canvasLocation" x="138.40000000000001" y="152.47376311844079"/>

@@ -7,11 +7,13 @@
 //
 
 #import "BWDemo3ViewController.h"
-#import "BWDemo4ViewController.h"
+#import "BWDemo3TableView0Cell.h"
 
-@interface BWDemo3ViewController () <UIWebViewDelegate>
+#define BW_CELL_ID @"BW_CELL_ID"
 
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@interface BWDemo3ViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -19,33 +21,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([BWDemo3TableView0Cell class]) bundle:nil] forCellReuseIdentifier:BW_CELL_ID];
 }
 
-- (IBAction)presentVC:(id)sender {
-    BWDemo4ViewController *demo4ViewController = [BWDemo4ViewController new];
-    UINavigationController *demo4NvgtVC = [[UINavigationController alloc] initWithRootViewController:demo4ViewController];
-    [self presentViewController:demo4NvgtVC animated:YES completion:nil];
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//    return 100;
+//}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 100;
 }
 
-#pragma mark - UIWebView Delegate
-
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-    NSLog(@"shouldStartLoadWithRequest");
-    return YES;
-}
-
-- (void)webViewDidStartLoad:(UIWebView *)webView {
-    NSLog(@"webViewDidStartLoad");
-}
-
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-    NSLog(@"webViewDidFinishLoad");
-}
-
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-    NSLog(@"didFailLoadWithError");
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    BWDemo3TableView0Cell *cell = [tableView dequeueReusableCellWithIdentifier:BW_CELL_ID];
+    [cell random];
+    return cell;
 }
 
 @end

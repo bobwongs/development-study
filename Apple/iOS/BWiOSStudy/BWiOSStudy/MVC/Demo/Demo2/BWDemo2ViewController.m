@@ -17,13 +17,16 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *longSpace;
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
-、
+@property (weak, nonatomic) IBOutlet UITextView *logTextView;
+
 @end
 
 @implementation BWDemo2ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.logTextView.text = self.log;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidChange:) name:UITextFieldTextDidChangeNotification object:nil];
     
@@ -38,6 +41,14 @@
     
 //    [NSLayoutConstraint deactivateConstraints:@[_shortSpace]];
 //    [NSLayoutConstraint activateConstraints:@[_longSpace]];
+}
+
+- (void)setLog:(NSString *)log {
+    _log = log;
+    
+    if (self.logTextView) {
+        self.logTextView.text = [NSString stringWithFormat:@"%@\n%@", self.logTextView.text, log];
+    }
 }
 
 - (void)textFieldDidChange:(NSNotification *)notification {

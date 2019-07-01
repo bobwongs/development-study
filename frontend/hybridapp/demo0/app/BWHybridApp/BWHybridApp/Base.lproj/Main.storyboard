@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cmq-0s-HqO">
+                                <rect key="frame" x="0.0" y="114" width="414" height="659"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="1E5-Qi-QQr"/>
+                                </connections>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20O-ce-0k5">
+                                <rect key="frame" x="135" y="44" width="129" height="30"/>
+                                <state key="normal" title="Reload Hybrid App"/>
+                                <connections>
+                                    <action selector="reloadApp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="duI-rU-NxZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebA-DE-pWO">
+                                <rect key="frame" x="316" y="64" width="57" height="30"/>
+                                <state key="normal" title="Forward"/>
+                                <connections>
+                                    <action selector="forward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SYx-wS-Etv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2XB-ka-7g9">
+                                <rect key="frame" x="42" y="64" width="43" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="43" id="9yX-t2-2YR"/>
+                                </constraints>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vW3-qU-GNS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHn-Yj-JCe">
+                                <rect key="frame" x="153" y="76" width="93" height="30"/>
+                                <state key="normal" title="Reload HTML"/>
+                                <connections>
+                                    <action selector="reload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="id8-F1-3bV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GpX-Vj-U4Q">
+                                <rect key="frame" x="175" y="790" width="64" height="30"/>
+                                <state key="normal" title="iOS to JS"/>
+                                <connections>
+                                    <action selector="iosToJS:" destination="BYZ-38-t0r" eventType="touchUpInside" id="29w-73-x8H"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Cmq-0s-HqO" firstAttribute="centerX" secondItem="GpX-Vj-U4Q" secondAttribute="centerX" id="5EP-p5-IHa"/>
+                            <constraint firstItem="eHn-Yj-JCe" firstAttribute="top" secondItem="20O-ce-0k5" secondAttribute="bottom" constant="2" id="9wt-h7-Bd5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GpX-Vj-U4Q" secondAttribute="bottom" constant="42" id="A4L-Sc-2et"/>
+                            <constraint firstItem="20O-ce-0k5" firstAttribute="centerX" secondItem="eHn-Yj-JCe" secondAttribute="centerX" id="Ca2-1y-B4j"/>
+                            <constraint firstItem="Cmq-0s-HqO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Gge-aO-L5z"/>
+                            <constraint firstItem="2XB-ka-7g9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="Gmw-JT-KY0"/>
+                            <constraint firstItem="2XB-ka-7g9" firstAttribute="baseline" secondItem="ebA-DE-pWO" secondAttribute="baseline" id="MDz-8w-p5u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ebA-DE-pWO" secondAttribute="trailing" constant="41" id="PPv-ip-PLU"/>
+                            <constraint firstAttribute="trailing" secondItem="Cmq-0s-HqO" secondAttribute="trailing" id="Sta-bE-Q1I"/>
+                            <constraint firstItem="2XB-ka-7g9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="TMA-jQ-1hQ"/>
+                            <constraint firstItem="20O-ce-0k5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TQL-J8-Ai7"/>
+                            <constraint firstItem="ebA-DE-pWO" firstAttribute="leading" secondItem="20O-ce-0k5" secondAttribute="trailing" constant="52" id="X2D-6R-Jkv"/>
+                            <constraint firstItem="Cmq-0s-HqO" firstAttribute="top" secondItem="eHn-Yj-JCe" secondAttribute="bottom" constant="8" symbolic="YES" id="cG8-AA-4x9"/>
+                            <constraint firstItem="GpX-Vj-U4Q" firstAttribute="top" secondItem="Cmq-0s-HqO" secondAttribute="bottom" constant="17" id="vQu-9I-8VU"/>
+                            <constraint firstItem="eHn-Yj-JCe" firstAttribute="leading" secondItem="2XB-ka-7g9" secondAttribute="trailing" constant="68" id="x5d-vB-UEA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Cmq-0s-HqO" id="kRb-HV-g6Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="135.9375"/>
+        </scene>
+    </scenes>
+</document>

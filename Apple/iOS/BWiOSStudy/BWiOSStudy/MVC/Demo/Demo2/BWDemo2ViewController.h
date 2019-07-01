@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BWDemo2ViewController : UIViewController
 
+@property (strong, nonatomic) NSString *log;
+
 @end
 
 NS_ASSUME_NONNULL_END

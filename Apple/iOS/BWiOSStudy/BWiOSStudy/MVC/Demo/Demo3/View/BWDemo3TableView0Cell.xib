@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="205" id="KGk-i7-Jjw" customClass="BWDemo3TableView0Cell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="205"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="204.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q8u-VL-DMh">
+                        <rect key="frame" x="12" y="12" width="296" height="50"/>
+                        <color key="backgroundColor" red="1" green="0.59607843140000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="2qv-3N-pKt"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUs-eT-Ie2">
+                        <rect key="frame" x="12" y="136" width="296" height="56.5"/>
+                        <color key="backgroundColor" red="0.94463390111923218" green="0.9224473495765324" blue="0.48713488450732789" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <string key="text">LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ghr-eB-eus">
+                        <rect key="frame" x="12" y="74" width="296" height="50"/>
+                        <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="hPy-CY-Zvj"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Ghr-eB-eus" secondAttribute="trailing" constant="12" id="6VU-kd-nkY"/>
+                    <constraint firstAttribute="trailing" secondItem="AUs-eT-Ie2" secondAttribute="trailing" constant="12" id="AAm-W5-2uB"/>
+                    <constraint firstAttribute="bottom" secondItem="q8u-VL-DMh" secondAttribute="bottom" priority="250" constant="12" id="BBV-SI-qLL"/>
+                    <constraint firstItem="AUs-eT-Ie2" firstAttribute="top" secondItem="Ghr-eB-eus" secondAttribute="bottom" constant="12" id="ExA-Jr-KEE"/>
+                    <constraint firstAttribute="trailing" secondItem="q8u-VL-DMh" secondAttribute="trailing" constant="12" id="GQH-rz-Suz"/>
+                    <constraint firstItem="AUs-eT-Ie2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="Owg-kQ-6AM"/>
+                    <constraint firstItem="q8u-VL-DMh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="Tb3-8k-I2L"/>
+                    <constraint firstAttribute="bottom" secondItem="AUs-eT-Ie2" secondAttribute="bottom" priority="750" constant="12" id="V1h-Td-gMy"/>
+                    <constraint firstItem="Ghr-eB-eus" firstAttribute="top" secondItem="q8u-VL-DMh" secondAttribute="bottom" constant="12" id="W55-8d-V6Q"/>
+                    <constraint firstAttribute="bottom" secondItem="Ghr-eB-eus" secondAttribute="bottom" priority="250" constant="12" id="bL5-uu-pUI"/>
+                    <constraint firstItem="Ghr-eB-eus" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="xLz-YQ-OFG"/>
+                    <constraint firstItem="q8u-VL-DMh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="zv9-B2-Gip"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="bottomLabel" destination="AUs-eT-Ie2" id="1HS-qH-KQl"/>
+                <outlet property="labelToBottom" destination="V1h-Td-gMy" id="hPS-cE-1oK"/>
+                <outlet property="middleToBottom" destination="bL5-uu-pUI" id="zBZ-W8-tkY"/>
+                <outlet property="middleView" destination="Ghr-eB-eus" id="Bud-Zh-ZUQ"/>
+                <outlet property="topToBottom" destination="BBV-SI-qLL" id="8zc-4f-y7X"/>
+                <outlet property="topView" destination="q8u-VL-DMh" id="Eby-Hh-0hq"/>
+            </connections>
+            <point key="canvasLocation" x="100.00000000000001" y="89.397321428571431"/>
+        </tableViewCell>
+    </objects>
+</document>
