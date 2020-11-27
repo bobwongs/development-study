@@ -8,9 +8,12 @@
 
 #import "Demo9ViewController.h"
 
+// 腾讯地图
 #import <QMapKit/QMapKit.h>
 #import <QMapKit/QMSSearchKit.h>
 
+#define BM_SEARCH_BAR_HEIGHT 44.0
+#define BM_TABLE_VIEW_HEIGHT 350.0
 
 @interface Demo9ViewController () <QMapViewDelegate, QMSSearchDelegate, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource>
 
@@ -25,7 +28,9 @@
 
 // Data
 @property (nonatomic, strong) NSArray *searchResultArray;
-@property (nonatomic, assign) CLLocationCoordinate2D selectedCoordinate;  // 选中坐标的经纬度
+@property (nonatomic, strong) QUserLocation *currentLocation;  ///< 当前位置信息
+@property (nonatomic, strong) QUserLocation *selectedLocation;  ///< 选中位置信息
+//@property (nonatomic, assign) CLLocationCoordinate2D selectedCoordinate;  // 选中坐标的经纬度
 //@property (nonatomic, assign) CLLocationCoordinate2D lastLocation;
 @property (nonatomic, assign) NSInteger selectedIndex;
 
@@ -41,21 +46,25 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
     [self setupMapView];
-    [self setupPointAnnotation];
     [self searchCurrentLocationWithKeyword:@""];
     [self setupSearchView];
     [self setupKeyboardNotification];
     [self setNavigationBar];
+//    [self setupPointAnnotation];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 /** 设置MapView */
 - (void)setupMapView {
     self.mapView = [[QMapView alloc] init];
-    self.mapView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 344);
+    self.mapView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - BM_SEARCH_BAR_HEIGHT - BM_TABLE_VIEW_HEIGHT);
     self.mapView.delegate = self;
     // 开启定位
     [self.mapView setShowsUserLocation:YES];
-#warning Todo：设置当前位置为选中点，是否初始为选中位置？
 //    [self.mapView setCenterCoordinate:CLLocationCoordinate2DMake(40.040219,116.273348)];
     [self.mapView setZoomLevel:15.0];
     [self.view addSubview:self.mapView];
@@ -68,9 +77,11 @@
     [self.mapView configureUserLocationPresentation:presentation];
 }
 
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+- (void)setupPointAnnotation {
+    _annotation = [[QPointAnnotation alloc] init];
+    _annotation.coordinate = _selectedLocation.location.coordinate;
+    [self.mapView addAnnotation:_annotation];
+//    [self.mapView setCenterCoordinate:_annotation.coordinate];
 }
 
 - (void)setNavigationBar {
@@ -80,6 +91,8 @@
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(confirmAction)];
     self.navigationItem.rightBarButtonItem = rightItem;
 }
+
+#pragma mark - Action
 
 - (void)dismissVC {
     NSLog(@"%@ dismiss", NSStringFromClass([self class]));
@@ -96,21 +109,17 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)setupPointAnnotation {
-    _annotation = [[QPointAnnotation alloc] init];
-    _annotation.coordinate = CLLocationCoordinate2DMake(40.040219,116.273348);
-    
-    [self.mapView addAnnotation:_annotation];
-}
-
 #pragma mark - QMapViewDelegate
 
 - (void)mapView:(QMapView *)mapView didUpdateUserLocation:(QUserLocation *)userLocation fromHeading:(BOOL)fromHeading {
     NSLog(@"%s fromHeading = %d, location = %@, heading = %@", __FUNCTION__, fromHeading, userLocation.location, userLocation.heading);
+    _currentLocation = userLocation;
     
-    if (!_selectedCoordinate) {
-        _selectedCoordinate = userLocation.location.coordinate;
-        [self.mapView setCenterCoordinate:_selectedCoordinate];
+    // Todo: confirm structure data valid.
+    if (!_selectedLocation) {
+        _selectedLocation = userLocation;
+        [self setupPointAnnotation];
+        [self.mapView setCenterCoordinate:userLocation.location.coordinate];
     }
 }
 
@@ -120,6 +129,7 @@
         _pinView = (QPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:pinIndentifier];
         if (_pinView == nil) {
             _pinView = [[QPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pinIndentifier];
+            _pinView.image = [UIImage imageNamed:@"tc_map_icon_nail_100"];
         }
         
         return _pinView;
@@ -191,16 +201,16 @@
 #pragma mark - SearchBar
 
 - (void)setupSearchView {
-    _searchView = [[UIView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 344, [UIScreen mainScreen].bounds.size.width, 344)];
+    _searchView = [[UIView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 344, [UIScreen mainScreen].bounds.size.width, BM_SEARCH_BAR_HEIGHT + BM_TABLE_VIEW_HEIGHT)];
 //    _searchView.backgroundColor = [UIColor systemGroupedBackgroundColor];
     [self.view addSubview:_searchView];
     
     _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 44)];
-    _searchBar.showsCancelButton = YES;
+//    _searchBar.showsCancelButton = YES;
     _searchBar.delegate = self;
     [_searchView addSubview:_searchBar];
     
-    _searchResultTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, [UIScreen mainScreen].bounds.size.width, 300) style:UITableViewStyleGrouped];
+    _searchResultTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, [UIScreen mainScreen].bounds.size.width, BM_TABLE_VIEW_HEIGHT) style:UITableViewStyleGrouped];
 //    _searchResultTableView.backgroundColor = [UIColor systemGroupedBackgroundColor];
     _searchResultTableView.dataSource = self;
     _searchResultTableView.delegate = self;
@@ -292,7 +302,6 @@
     if (_mapSearcher == nil) {
         _mapSearcher = [[QMSSearcher alloc] initWithDelegate:self];
     }
-    
     return _mapSearcher;
 }
 
