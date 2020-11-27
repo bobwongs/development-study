@@ -7,12 +7,16 @@
 
 .view1 {
   /* display: inline-block; */
-  margin-left: 100rpx;
+  /* margin-left: 100rpx; */
   width: 0;
   height: 0;
-  border-top: 50rpx solid #7de87d;
+  /* border-top: 50rpx solid #7de87d;
   border-left: 50rpx solid transparent;
-  border-right: 50rpx solid transparent;
+  border-right: 50rpx solid transparent; */
+
+  border-top: 100rpx solid transparent;
+  border-left: 1000rpx solid red;
+  border-bottom: 100rpx solid transparent;
 }
 
 .myInput {
@@ -26,4 +30,58 @@
 .my-scroll-view {
   background: lightgray;
   max-height: 150rpx;
+}
+
+.me {
+  background: orange;
+  border-bottom: 1rpx solid black;
+  padding-left: 20rpx;
+}
+
+.view2 {
+  background: orange;
+  height: 150rpx;
+  /* display: flex; */
+
+  
+}
+
+.subview20 {
+  background: lightgray;
+  width: 200rpx;
+  height: 100rpx;
+  position: relative;
+}
+
+.subview21 {
+  background: lightcyan;
+  width: 200rpx;
+  height: 100rpx;
+}
+
+
+.view3 {
+  display: flex;
+  background-color: lightgray;
+  justify-content: flex-end;
+}
+
+.subview30 {
+  /* flex-grow: 1; */
+  background-color: orange;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.subview31 {
+  margin-left: 24rpx;
+  background: yellow;
+}
+
+.view4 {
+  background: gray;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
 }

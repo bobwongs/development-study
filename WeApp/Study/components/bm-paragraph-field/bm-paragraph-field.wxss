@@ -1,0 +1,46 @@
+/* components/control/bm-paragraph-field/bm-paragraph-field.wxss */
+.bm-box {
+  border-bottom: 2rpx solid #E9E9E9;
+  padding: 32rpx 24rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.bm-box .top-view {
+  display: flex;
+  align-items: center;
+}
+
+.bm-box .top-view .title {
+  font-size: 24rpx;
+  color: #757575;
+  white-space: nowrap;
+}
+
+.bm-box .top-view .title .star {
+  color: #EC0B3B;
+}
+
+.bm-box .top-view .count {
+  flex-grow: 1;
+  font-size: 24rpx;
+  color: #FF610C;
+  text-align: right;
+}
+
+.bm-box>textarea {
+  margin-top: 16rpx;
+  width: calc(100% - 2 * 24rpx);
+  height: 76rpx; /* 100 - 垂直方向的上下padding */
+  font-size: 24rpx;
+  color: #212121;
+  background: #FBFBFB;
+  border: 1px solid #E9E9E9;
+  border-radius: 8rpx;
+  padding: 12rpx 20rpx;
+}
+
+.bm-box .placeholder {
+  font-size: 24rpx;
+  color: #B3B3B3;
+}

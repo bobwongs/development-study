@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9436A653FA24690260A459B8 /* libPods-BWObjective-CStudy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AADE02E9C46BC41C5929CFC /* libPods-BWObjective-CStudy.a */; };
+		B456111524CFB10400CF5C8F /* NSString+BWAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B456111424CFB10400CF5C8F /* NSString+BWAdd.m */; };
 		B4574D20228180F4004F1B85 /* BWDemo0Class.m in Sources */ = {isa = PBXBuildFile; fileRef = B4574D1F228180F4004F1B85 /* BWDemo0Class.m */; };
+		B46909DC2565020B00CC8B7B /* BWModel0.m in Sources */ = {isa = PBXBuildFile; fileRef = B46909DB2565020B00CC8B7B /* BWModel0.m */; };
 		B47A9F3522BC845F0036A5B2 /* BWPersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B47A9F3422BC845F0036A5B2 /* BWPersonModel.m */; };
 		B4C1DEC820BB9D39009FBAB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DEC720BB9D39009FBAB1 /* main.m */; };
 		B4C1DEFF20BBABCA009FBAB1 /* BWMessageSending.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DEFE20BBABCA009FBAB1 /* BWMessageSending.m */; };
 		B4C1DF0220BBAC13009FBAB1 /* BWRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DF0120BBAC13009FBAB1 /* BWRuntime.m */; };
 		B4C1DF1220BBE08E009FBAB1 /* BWTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DF1120BBE08E009FBAB1 /* BWTesting.m */; };
 		B4C1DF1A20BBE23D009FBAB1 /* BWCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DF1920BBE23D009FBAB1 /* BWCounter.m */; };
+		B4D2B17224AF33EB004B6663 /* NSString+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D2B17124AF33EB004B6663 /* NSString+YYAdd.m */; };
+		B4F0A00124C7E9D600447038 /* NSString+BMEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F09FFD24C7E9D600447038 /* NSString+BMEncryption.m */; };
+		B4F0A00224C7E9D600447038 /* NSString+BMEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F09FFD24C7E9D600447038 /* NSString+BMEncryption.m */; };
+		B4F0A00324C7E9D600447038 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F0A00024C7E9D600447038 /* GTMBase64.m */; };
+		B4F0A00424C7E9D600447038 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F0A00024C7E9D600447038 /* GTMBase64.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,8 +37,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3AADE02E9C46BC41C5929CFC /* libPods-BWObjective-CStudy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BWObjective-CStudy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E3C17B4E0A736F135674C2A /* Pods-BWObjective-CStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CStudy.debug.xcconfig"; path = "Target Support Files/Pods-BWObjective-CStudy/Pods-BWObjective-CStudy.debug.xcconfig"; sourceTree = "<group>"; };
+		B456111324CFB10400CF5C8F /* NSString+BWAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+BWAdd.h"; sourceTree = "<group>"; };
+		B456111424CFB10400CF5C8F /* NSString+BWAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+BWAdd.m"; sourceTree = "<group>"; };
 		B4574D1E228180F4004F1B85 /* BWDemo0Class.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDemo0Class.h; sourceTree = "<group>"; };
 		B4574D1F228180F4004F1B85 /* BWDemo0Class.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDemo0Class.m; sourceTree = "<group>"; };
+		B46361F324C1554500AB9B5A /* File */ = {isa = PBXFileReference; lastKnownFileType = text; name = File; path = Record/File; sourceTree = "<group>"; };
+		B46909DA2565020B00CC8B7B /* BWModel0.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWModel0.h; sourceTree = "<group>"; };
+		B46909DB2565020B00CC8B7B /* BWModel0.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWModel0.m; sourceTree = "<group>"; };
 		B47A9F3322BC845F0036A5B2 /* BWPersonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWPersonModel.h; sourceTree = "<group>"; };
 		B47A9F3422BC845F0036A5B2 /* BWPersonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWPersonModel.m; sourceTree = "<group>"; };
 		B4C1DEC420BB9D39009FBAB1 /* BWObjective-CStudy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "BWObjective-CStudy"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +65,14 @@
 		B4C1DF1320BBE08E009FBAB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4C1DF1820BBE23D009FBAB1 /* BWCounter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWCounter.h; sourceTree = "<group>"; };
 		B4C1DF1920BBE23D009FBAB1 /* BWCounter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWCounter.m; sourceTree = "<group>"; };
+		B4D2B17024AF33EB004B6663 /* NSString+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YYAdd.h"; sourceTree = "<group>"; };
+		B4D2B17124AF33EB004B6663 /* NSString+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YYAdd.m"; sourceTree = "<group>"; };
+		B4F09FFC24C7E9D600447038 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		B4F09FFD24C7E9D600447038 /* NSString+BMEncryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BMEncryption.m"; sourceTree = "<group>"; };
+		B4F09FFE24C7E9D600447038 /* NSString+BMEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BMEncryption.h"; sourceTree = "<group>"; };
+		B4F09FFF24C7E9D600447038 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		B4F0A00024C7E9D600447038 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		CE833BD590722399412C261D /* Pods-BWObjective-CStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CStudy.release.xcconfig"; path = "Target Support Files/Pods-BWObjective-CStudy/Pods-BWObjective-CStudy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9436A653FA24690260A459B8 /* libPods-BWObjective-CStudy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +94,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B456111224CFB0EC00CF5C8F /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				B456111324CFB10400CF5C8F /* NSString+BWAdd.h */,
+				B456111424CFB10400CF5C8F /* NSString+BWAdd.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		B4574D1C228180B0004F1B85 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +121,15 @@
 			path = Demo0;
 			sourceTree = "<group>";
 		};
+		B46909D9256501F900CC8B7B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B46909DA2565020B00CC8B7B /* BWModel0.h */,
+				B46909DB2565020B00CC8B7B /* BWModel0.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B47A9F3222BC84410036A5B2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +146,7 @@
 				B4C1DF1020BBE08E009FBAB1 /* BWTesting */,
 				B4C1DEC520BB9D39009FBAB1 /* Products */,
 				B4C1DF0820BBDEC6009FBAB1 /* Frameworks */,
+				C9497D4EA4A61133E65EEBE9 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +163,11 @@
 			isa = PBXGroup;
 			children = (
 				B4C1DEC720BB9D39009FBAB1 /* main.m */,
+				B46361F324C1554500AB9B5A /* File */,
+				B46909D9256501F900CC8B7B /* Model */,
+				B456111224CFB0EC00CF5C8F /* Category */,
+				B4F09FFA24C7E9D600447038 /* Util */,
+				B4D2B16F24AF33EB004B6663 /* Tmp */,
 				B4C1DF0320BBADDA009FBAB1 /* Common */,
 				B4C1DECE20BB9D72009FBAB1 /* Runtime */,
 				B4C1DEF920BBAB8C009FBAB1 /* MessageSending */,
@@ -163,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				B4C1DF0920BBDEC6009FBAB1 /* XCTest.framework */,
+				3AADE02E9C46BC41C5929CFC /* libPods-BWObjective-CStudy.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -185,6 +234,44 @@
 			path = Testing;
 			sourceTree = "<group>";
 		};
+		B4D2B16F24AF33EB004B6663 /* Tmp */ = {
+			isa = PBXGroup;
+			children = (
+				B4D2B17024AF33EB004B6663 /* NSString+YYAdd.h */,
+				B4D2B17124AF33EB004B6663 /* NSString+YYAdd.m */,
+			);
+			path = Tmp;
+			sourceTree = "<group>";
+		};
+		B4F09FFA24C7E9D600447038 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				B4F09FFB24C7E9D600447038 /* BMEncryption */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		B4F09FFB24C7E9D600447038 /* BMEncryption */ = {
+			isa = PBXGroup;
+			children = (
+				B4F09FFC24C7E9D600447038 /* GTMBase64.h */,
+				B4F09FFD24C7E9D600447038 /* NSString+BMEncryption.m */,
+				B4F09FFE24C7E9D600447038 /* NSString+BMEncryption.h */,
+				B4F09FFF24C7E9D600447038 /* GTMDefines.h */,
+				B4F0A00024C7E9D600447038 /* GTMBase64.m */,
+			);
+			path = BMEncryption;
+			sourceTree = "<group>";
+		};
+		C9497D4EA4A61133E65EEBE9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E3C17B4E0A736F135674C2A /* Pods-BWObjective-CStudy.debug.xcconfig */,
+				CE833BD590722399412C261D /* Pods-BWObjective-CStudy.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -192,6 +279,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4C1DECB20BB9D39009FBAB1 /* Build configuration list for PBXNativeTarget "BWObjective-CStudy" */;
 			buildPhases = (
+				D702AF9C63F853E95CA28A8A /* [CP] Check Pods Manifest.lock */,
 				B4C1DEC020BB9D39009FBAB1 /* Sources */,
 				B4C1DEC120BB9D39009FBAB1 /* Frameworks */,
 				B4C1DEC220BB9D39009FBAB1 /* CopyFiles */,
@@ -269,13 +357,42 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D702AF9C63F853E95CA28A8A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BWObjective-CStudy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B4C1DEC020BB9D39009FBAB1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4F0A00124C7E9D600447038 /* NSString+BMEncryption.m in Sources */,
 				B4C1DEC820BB9D39009FBAB1 /* main.m in Sources */,
+				B456111524CFB10400CF5C8F /* NSString+BWAdd.m in Sources */,
+				B46909DC2565020B00CC8B7B /* BWModel0.m in Sources */,
 				B47A9F3522BC845F0036A5B2 /* BWPersonModel.m in Sources */,
+				B4F0A00324C7E9D600447038 /* GTMBase64.m in Sources */,
 				B4C1DF0220BBAC13009FBAB1 /* BWRuntime.m in Sources */,
 				B4574D20228180F4004F1B85 /* BWDemo0Class.m in Sources */,
 				B4C1DEFF20BBABCA009FBAB1 /* BWMessageSending.m in Sources */,
@@ -288,6 +405,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4C1DF1220BBE08E009FBAB1 /* BWTesting.m in Sources */,
+				B4D2B17224AF33EB004B6663 /* NSString+YYAdd.m in Sources */,
+				B4F0A00224C7E9D600447038 /* NSString+BMEncryption.m in Sources */,
+				B4F0A00424C7E9D600447038 /* GTMBase64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +519,7 @@
 		};
 		B4C1DECC20BB9D39009FBAB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E3C17B4E0A736F135674C2A /* Pods-BWObjective-CStudy.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V3E8GUFW32;
@@ -408,6 +529,7 @@
 		};
 		B4C1DECD20BB9D39009FBAB1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE833BD590722399412C261D /* Pods-BWObjective-CStudy.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V3E8GUFW32;

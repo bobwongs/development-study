@@ -1,0 +1,74 @@
+/* pages/page2/index.wxss */
+
+.list {
+
+}
+
+.item {
+  border-bottom: 5rpx solid black;
+}
+
+.item:last-of-type {
+  border: 0;
+}
+
+
+/* .list .item:first-child {
+  background: gray;
+} */
+
+/* .list:last-child {
+  border-bottom: 0;
+} */
+
+/* .item:first-child {
+  border: 0;
+} */
+
+.view0 {
+  display: flex;
+}
+
+.subview00 {
+  background: orange;
+  white-space: nowrap;
+}
+
+.subview01 {
+  flex-grow: 1;
+  background: lightgray;
+  text-align: right;
+}
+
+.img-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img-item {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+}
+
+.img-item>image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.view20 {
+  /* background-color: orange; */
+  height: 200rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  /* outline: 15rpx solid black; */
+  border: 15rpx solid black;
+}
+
+.view30 {
+  
+}
+
+.view41 {
+  display: inline;
+}

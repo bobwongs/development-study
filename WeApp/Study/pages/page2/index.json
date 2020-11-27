@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "comp0": "/components/comp0/index",
+    "bm-paragraph-field": "/components/bm-paragraph-field/bm-paragraph-field"
+  }
+}

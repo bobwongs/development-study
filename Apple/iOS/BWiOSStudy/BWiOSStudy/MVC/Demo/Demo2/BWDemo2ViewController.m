@@ -7,6 +7,7 @@
 //
 
 #import "BWDemo2ViewController.h"
+#import "BMDemo2View1.h"
 
 @interface BWDemo2ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -26,6 +27,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    
     self.logTextView.text = self.log;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidChange:) name:UITextFieldTextDidChangeNotification object:nil];
@@ -41,6 +44,24 @@
     
 //    [NSLayoutConstraint deactivateConstraints:@[_shortSpace]];
 //    [NSLayoutConstraint activateConstraints:@[_longSpace]];
+    
+    
+//    self.edgesForExtendedLayout = UIRectEdgeNone;
+//    
+//    UIScrollView *scrollView = [[UIScrollView alloc] init];
+//    scrollView.backgroundColor = UIColor.orangeColor;
+//    scrollView.frame = self.view.bounds;
+//    [self.view addSubview:scrollView];
+//    [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.equalTo(self.view);
+//    }];
+//    
+//    UIView *view0 = [[UIView alloc] initWithFrame:CGRectMake(20, 20, 200, 2000)];
+//    view0.backgroundColor = UIColor.lightGrayColor;
+//    [scrollView addSubview:view0];
+//    [view0 mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.equalTo(self.view);
+//    }];
 }
 
 - (void)setLog:(NSString *)log {
@@ -72,18 +93,23 @@
 //}
 
 - (IBAction)button0Action:(UIButton *)sender {
-    BOOL selected = !sender.isSelected;
-    sender.selected = selected;
-    NSLog(@"selected: %@", @(selected));
     
-    _shortSpace.active = selected;
-    _longSpace.active = !selected;
+    UIViewController *viewController = [UIViewController new];
+    [self.navigationController pushViewController:viewController animated:NO];
     
-    [self.view setNeedsLayout];
-    [self.view layoutSubviews];
     
-    [NSLayoutConstraint deactivateConstraints:@[_shortSpace]];
-    [NSLayoutConstraint activateConstraints:@[_longSpace]];
+//    BOOL selected = !sender.isSelected;
+//    sender.selected = selected;
+//    NSLog(@"selected: %@", @(selected));
+//
+//    _shortSpace.active = selected;
+//    _longSpace.active = !selected;
+//
+//    [self.view setNeedsLayout];
+//    [self.view layoutSubviews];
+//
+//    [NSLayoutConstraint deactivateConstraints:@[_shortSpace]];
+//    [NSLayoutConstraint activateConstraints:@[_longSpace]];
     
     
 //    _shortSpace.priority = !selected ? UILayoutPriorityRequired : UILayoutPriorityDefaultLow;

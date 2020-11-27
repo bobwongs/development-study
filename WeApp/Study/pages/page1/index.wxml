@@ -1,0 +1,10 @@
+<!--pages/page1/index.wxml-->
+<image class="image0" src="/assets/bg/qrcode0.png" mode="aspectFit">
+  <view class="sub-view0">
+    <image class="sub-image0" src="/assets/icons/profile_bg_address.png"></image>
+  </view>
+</image>
+
+<view class="list">
+  <view class="item" wx:for="{{list}}"></view>
+</view>

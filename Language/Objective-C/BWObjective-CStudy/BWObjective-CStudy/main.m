@@ -14,10 +14,26 @@
 #include <stdlib.h>
 #import "BWPersonModel.h"
 //#import <MJExtension.h>
+#import "NSString+YYAdd.h"
+#import "NSString+BMEncryption.h"
+#import "NSString+BWAdd.h"
+#import "BWModel0.h"
+#import <MJExtension.h>
+
 
 void test0(void);
 void test1(void);
 void test2(void);
+
+#define BW_A @"ABCDE"
+#define BW_B BW_A
+
+#define MY_MAX 5
+
+#define BM_ENCODE_DES_SECRET_KEY    @"19491001" // DES加密秘钥
+
+#define BM_FIRST @"123"
+#define BM_FIRST_SUB BM_FIRST@"432"
 
 typedef NS_ENUM(NSInteger, StudentType) {
     Male,
@@ -27,46 +43,57 @@ typedef NS_ENUM(NSInteger, StudentType) {
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        
-        
-        
-//        BWPersonModel *model = [BWPersonModel mj_objectWithKeyValues:nil];
-//        NSLog(@"model: %@, %@", model.name, model.country);
-        
-//        BWPersonModel *model = [BWPersonModel new];
-//        model.name = @"32";
-//        model.country = @"23";
+//        BWModel0 *model = [BWModel0 new];
+//        model.companyName = @"new company name";
 //
-//        __block BOOL valid = YES;
-//        NSArray *array = @[@"name", @"country"];
-//        [array enumerateObjectsUsingBlock:^(NSString * _Nonnull key, NSUInteger idx, BOOL * _Nonnull stop) {
-//            id value = [model valueForKey:key];
-//            if (!value) {
-//                valid = NO;
-//                *stop = YES;
-//            }
-//            if ([value isKindOfClass:[NSString class]]) {
-//                BOOL validValue = ((NSString *)value).length;
-//                if (!validValue) {
-//                    valid = NO;
-//                    *stop = YES;
-//                }
-//            }
+//        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+//        model.arrayNewAddedImage = [@[userDefaults] mutableCopy];
+//        NSDictionary *dict = model.mj_keyValues;
+//        NSLog(@"dict: %@", dict);
+        
+//        NSString *text;
+//        NSMutableDictionary *params = [@{} mutableCopy];
+//        params[@"text"] = text;
+//        NSLog(@"params: %@", params);
+        
+//        NSArray *array = @[@"1", @"2", @"3"];
+//        NSMutableArray *arrayM = [NSMutableArray arrayWithArray:array];
+//        NSMutableArray *arrayM2 = [array mutableCopy];
+//        NSLog(@"arrayM: %@", arrayM);
+//        NSLog(@"arrayM2: %@", arrayM2);
+        
+//        BWModel0 *model0 = [BWModel0 new];
+//        model0.companyName = @"name";
+//        model0.arrayNewAddedImage = [@[[NSUserDefaults standardUserDefaults]] mutableCopy];
+//        NSLog(@"model0 keyvalues: %@", model0.mj_keyValues);
+        
+        
+        
+        
+
+//
+//        NSArray *array0 = @[model0];
+//        NSLog(@"array0 keyvalues: %@", [BWModel0 mj_keyValuesArrayWithObjectArray:array0]);
+        
+//        BWModel0 *model0 = [BWModel0 new];
+//        model0.companyName = @"BWModel0 cn";
+//        BWModel0 *model1 = [BWModel0 new];
+//        model1.companyName = @"BWModel1 cn";
+//
+//        NSArray<BWModel0 *> *array = @[model0, model1];
+//        NSLog(@"array: %@", array);
+//        void (^printArrayBlock)(void) = ^{
+//            [array enumerateObjectsUsingBlock:^(BWModel0 *  _Nonnull model, NSUInteger idx, BOOL * _Nonnull stop) {
+//                NSLog(@"model companyName: %@", model.companyName);
+//            }];
+//        };
+//
+//        printArrayBlock();
+//        [array enumerateObjectsUsingBlock:^(BWModel0 * _Nonnull model, NSUInteger idx, BOOL * _Nonnull stop) {
+//            model.companyName = [NSString stringWithFormat:@"new name with index: %@", @(idx)];
 //        }];
-//
-//        NSLog(@"valid: %@", @(valid));
+//        printArrayBlock();
         
-        
-//        for (NSInteger i = 0; i < 10; i++) {
-//            NSLog(@"%@", @(arc4random_uniform(10)));
-//        }
-        
-//        test2();
-
-//        BWDemo0Class *demo0 = [BWDemo0Class new];
-////        demo0.name = @"hi";
-//        NSLog(@"%@", @(demo0.count));
-
     }
     return 0;
 }

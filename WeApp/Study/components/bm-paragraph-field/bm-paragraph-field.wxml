@@ -1,0 +1,11 @@
+<!--components/control/bm-paragraph-field/bm-paragraph-field.wxml-->
+<view class='bm-box'>
+  <view class='top-view'>
+    <view class='title'>      
+      <text>{{title}}</text>
+      <text wx:if='{{showStar}}' class='star'>*</text>
+    </view>
+    <view class='count'>{{inputedTextLength}}/{{limitedLength}}</view>
+  </view>
+  <textarea placeholder='{{placeholder}}' placeholder-class='placeholder' value='{{text}}' bindinput='inputText'></textarea>
+</view>

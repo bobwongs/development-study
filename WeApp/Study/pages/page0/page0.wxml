@@ -24,3 +24,21 @@
 <input cursor-spacing='100' bindblur='blurAction' placeholder='Input'></input>
 
 <view>action</view>
+
+<block bindtap="meTap">
+  <view  bindtap="meTap" class="me">Me</view>
+</block>
+
+<control0 wx:if='{{showControl0}}' bindtap="meTap" />
+
+<view class="view2">
+  <view class="subview20">Subview00</view>
+  <view class="subview21">Subview01</view>
+</view>
+
+<view class="view3">
+  <view class="subview30">subview30</view>
+  <view class="subview31">status</view>
+</view>
+
+<view class="view4">Confirm</view>

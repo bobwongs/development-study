@@ -1,1 +1,5 @@
-{}
+{
+  "usingComponents": {
+    "control0": "/components/control0/index"
+  }
+}

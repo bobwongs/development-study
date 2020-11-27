@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BWDemo3ViewController">
             <connections>
                 <outlet property="tableView" destination="urh-DO-DGE" id="pfY-gX-VTu"/>
+                <outlet property="textField" destination="z0X-uy-C61" id="7QR-60-L90"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,12 +29,36 @@
                         <outlet property="delegate" destination="-1" id="kdh-kp-RZd"/>
                     </connections>
                 </tableView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z0X-uy-C61">
+                    <rect key="frame" x="78" y="225" width="164" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="164" id="AOL-Qi-XR7"/>
+                        <constraint firstAttribute="height" constant="30" id="GFL-0H-6nC"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="XUe-oS-LU0"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwV-Lc-71R">
+                    <rect key="frame" x="137" y="122" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="s33-ZG-GOv"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="urh-DO-DGE" secondAttribute="bottom" id="6ca-MW-YL5"/>
                 <constraint firstItem="urh-DO-DGE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Cdf-Ho-jtM"/>
                 <constraint firstAttribute="trailing" secondItem="urh-DO-DGE" secondAttribute="trailing" id="CrU-g8-4Ru"/>
+                <constraint firstItem="IwV-Lc-71R" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FO2-ig-8U9"/>
+                <constraint firstItem="z0X-uy-C61" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FSL-mp-5yw"/>
+                <constraint firstItem="z0X-uy-C61" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="RXq-ZE-uqU"/>
+                <constraint firstItem="IwV-Lc-71R" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="122" id="gBO-OA-hhM"/>
                 <constraint firstItem="urh-DO-DGE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hpT-U1-rFv"/>
             </constraints>
             <point key="canvasLocation" x="138.75" y="155"/>

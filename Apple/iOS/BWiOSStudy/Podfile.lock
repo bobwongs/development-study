@@ -1,0 +1,38 @@
+PODS:
+  - Masonry (1.1.0)
+  - MJExtension (3.0.15.1)
+  - SVProgressHUD (2.2.5)
+  - Tencent-MapSDK (4.3.9.2)
+  - YYCategories (1.0.4):
+    - YYCategories/no-arc (= 1.0.4)
+  - YYCategories/no-arc (1.0.4)
+  - YYText (1.0.7)
+
+DEPENDENCIES:
+  - Masonry (~> 1.1.0)
+  - MJExtension (= 3.0.15.1)
+  - SVProgressHUD (= 2.2.5)
+  - Tencent-MapSDK (= 4.3.9.2)
+  - YYCategories (= 1.0.4)
+  - YYText
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Masonry
+    - MJExtension
+    - SVProgressHUD
+    - Tencent-MapSDK
+    - YYCategories
+    - YYText
+
+SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  Tencent-MapSDK: 4906ef3e1842167b836ce706692c0696643eab62
+  YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
+
+PODFILE CHECKSUM: 14cffecb36b8a3afb53e7f8f8008c50fe5122dd8
+
+COCOAPODS: 1.9.2

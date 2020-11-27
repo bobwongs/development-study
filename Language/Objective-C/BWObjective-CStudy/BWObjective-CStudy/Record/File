@@ -1,0 +1,8 @@
+
+URL: bluemoon-control/user/ssoLoginApp Name: App登录 APIManager: LoginApp Interface: LOGIN_APP
+URL: bluemoon-control/user/getVerifyCodeByMobileNo Name: 获取短信验证码 APIManager: GetVerifyCodeByMobileNo Interface: GET_VERIFY_CODE_BY_MOBILE_NO
+URL: bluemoon-control/user/resetPasswordByMobileNoAndAccount Name: 短信方式重置密码 APIManager: ResetPasswordByMobileNoAndAccount Interface: RESET_PW_BY_MOBILE_NO_AND_ACCOUNT
+URL: bluemoon-control/user/getUserInfoApp Name: 用户相关-获取用户信息 APIManager: GetUserInfoApp Interface: GET_USER_INFO_APP
+URL: bluemoon-control/user/updatePasswordApp Name: 用户相关-修改密码 APIManager: UpdatePasswordApp Interface: UPDATE_PASSWORD_APP
+URL: bluemoon-control/user/getAppMenus Name: 获取菜单 APIManager: GetAppMenus Interface: GET_APP_MENUS
+URL: bluemoon-control/user/getAppVersion Name: 获取app更新 APIManager: GetAppVersion Interface: GET_APP_VERSION

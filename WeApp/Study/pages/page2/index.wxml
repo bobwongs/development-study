@@ -1,0 +1,36 @@
+<!--pages/page2/index.wxml-->
+
+<view class="list">
+  <block wx:for="{{itemList}}">
+    <view class="item">{{item}}</view>
+  </block>
+</view>
+
+<comp0 type='show_other'>
+  <!-- <view>other text show</view> -->
+  <text>other text show</text>
+</comp0>
+
+<view class="view0">
+  <view class="subview00">title title title title</view>
+  <view class="subview01">content content content content content content content content content content content content content content content content</view>
+</view>
+
+<view class="img-list">
+  <view class="img-item" wx:for="{{imgList}}">
+    <image src="/assets/img/img0.jpeg"></image>
+  </view>
+</view>
+
+<bm-paragraph-field title="详细地址" />
+
+<view class="view20"></view>
+
+<view class="view30" bindtap="view30Tap">Jump</view>
+
+<view>
+  地址
+  <view class="view41">sub地址</view>
+</view>
+
+<view bindtap="scanTest">Scan</view>

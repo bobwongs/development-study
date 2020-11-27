@@ -12,6 +12,12 @@
 #import "BWDemo2Sub0View.h"
 #import <MJExtension.h>
 #import "BWPersonModel.h"
+#import "Demo5ViewController.h"
+#import "Demo6ViewController.h"
+#import "Demo8ViewController.h"
+#import "Demo9ViewController.h"
+
+#import <QMapKit/QMSSearchServices.h>
 
 @interface AppDelegate ()
 
@@ -23,33 +29,34 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//    UIViewController *vc = [[BWDemo3ViewController alloc] init];
+//    BWDemo2ViewController *demo2VC = [BWDemo2ViewController new];
+//    self.demo2VC = demo2VC;
+//
+//    UITabBarController *tabBarVC = [[UITabBarController alloc] init];
+//    UINavigationController *demo2NvgtVC = [[UINavigationController alloc] initWithRootViewController:demo2VC];
+//    UINavigationController *demo3NvgtVC = [[UINavigationController alloc] initWithRootViewController:[BWDemo3ViewController new]];
+//    tabBarVC.viewControllers = @[demo2NvgtVC, demo3NvgtVC];
     
-    BWPersonModel *model = [BWPersonModel mj_objectWithKeyValues:@{}];
-    NSLog(@"model: %@", model);
-    NSLog(@"model: %@, %@", model.name, model.country);
+    // 启用检索功能
+    QMSSearchServices.sharedServices.apiKey = @"JFBBZ-3MHK3-26E32-YUE4Q-WE5F7-6AFMV";
     
-    BWDemo2ViewController *demo2VC = [BWDemo2ViewController new];
-    self.demo2VC = demo2VC;
     
-    UITabBarController *tabBarVC = [[UITabBarController alloc] init];
-    UINavigationController *demo2NvgtVC = [[UINavigationController alloc] initWithRootViewController:demo2VC];
-    UINavigationController *demo3NvgtVC = [[UINavigationController alloc] initWithRootViewController:[BWDemo3ViewController new]];
-    tabBarVC.viewControllers = @[demo3NvgtVC, demo2NvgtVC];
+    UIViewController *vc = [Demo8ViewController new];
+    UINavigationController *nvgtVC = [[UINavigationController alloc] initWithRootViewController:vc];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = tabBarVC;
+//    self.window.rootViewController = tabBarVC;
+//    self.window.rootViewController = vc;
+    self.window.rootViewController = nvgtVC;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    
-    
     /* ---------- Quic Test ---------- */
     
-    UINib *nib = [UINib nibWithNibName:NSStringFromClass([BWDemo2Sub0View class]) bundle:nil];
-    NSArray *array = [nib instantiateWithOwner:nil options:nil];
-    NSLog(@"nib: %@", nib);
-    NSLog(@"array: %@", array);
+//    UINib *nib = [UINib nibWithNibName:NSStringFromClass([BWDemo2Sub0View class]) bundle:nil];
+//    NSArray *array = [nib instantiateWithOwner:nil options:nil];
+//    NSLog(@"nib: %@", nib);
+//    NSLog(@"array: %@", array);
     
     /* ---------- Quic Test ---------- */
     

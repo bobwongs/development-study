@@ -1,11 +1,18 @@
 // pages/page0/page0.js
+const tool = require('../../utils/tool.js')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    meTap: 'meTap',
+    showControl0: 1
+  },
 
+  meTap() {
+    console.log('me tap')
   },
 
   sayHi() {
@@ -23,7 +30,43 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.sayHi(false)
+
+    // let one
+    // let obj = { first: one }
+    // console.log(obj)
+    // console.log(obj.value)
+
+    // tool.sayHi()
+
+    // let work = (a) => {
+    //   let type = typeof(a)
+    //   console.log('type: ' + type)
+    //   if (a === false) {
+    //     console.log('valid')
+    //   } else {
+    //     console.log('invalid')
+    //   }
+    // }
+
+    // work()
+
+    let text = ''
+    if (text) {
+      console.log('valid')
+    } else {
+      console.log('invalid')
+    }
+
+    // let text = null
+    // if (text !== null && text.info == '1') {
+    //   console.log('valid')
+    // } else {
+    //   console.log('invalid')
+    // }
+
+    // tool.user.getAccount()
+
+    // this.sayHi(false)
 
     // wx.getSystemInfo({
     //   success: function(res) {
@@ -98,8 +141,8 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-
+  onShow() {
+    console.log('onShow')
   },
 
   /**
