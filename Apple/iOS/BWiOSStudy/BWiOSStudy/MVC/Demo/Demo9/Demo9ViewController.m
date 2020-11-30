@@ -25,6 +25,7 @@
 @property (nonatomic, strong) QMSSearcher *mapSearcher;
 @property (nonatomic, strong) QPointAnnotation *annotation;
 @property (nonatomic, strong) QPinAnnotationView *pinView;
+@property (nonatomic, strong) UIButton *toCurrentLocationButton;  ///< 定位到当前位置按钮
 
 // Data
 @property (nonatomic, strong) NSArray *searchResultArray;
@@ -45,11 +46,13 @@
     self.title = @"位置";
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
+    [self setNavigationBar];
     [self setupMapView];
-    [self searchCurrentLocationWithKeyword:@""];
+    [self setupToCurrentLocationButton];
     [self setupSearchView];
     [self setupKeyboardNotification];
-    [self setNavigationBar];
+    
+//    [self searchCurrentLocationWithKeyword:@""];
 //    [self setupPointAnnotation];
 }
 
@@ -75,6 +78,16 @@
     presentation.icon = [UIImage imageNamed:@"tc_map_icon_point"];
     // 配置定位样式
     [self.mapView configureUserLocationPresentation:presentation];
+}
+
+- (void)setupToCurrentLocationButton {
+    CGFloat buttonWidth = 66, buttonSpace = 44;
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(CGRectGetHeight(self.mapView) - buttonSpace, CGRectGetWidth(self.mapView) - buttonSpace, buttonWidth, buttonWidth);
+    [button setImage:[UIImage imageNamed:@"tc_map_icon_located_blue"] forState:UIControlStateNormal];
+    button.backgroundColor = [UIColor colorWithRed:76.0 / 255 green:76.0 / 255 blue:76.0 / 255 alpha:1];
+    [button addTarget:self action:@selector(toCurrentLocationAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
 }
 
 - (void)setupPointAnnotation {
@@ -109,12 +122,19 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+/** 到当前位置 */
+- (void)toCurrentLocationAction {
+#warning Todo
+}
+
 #pragma mark - QMapViewDelegate
 
 - (void)mapView:(QMapView *)mapView didUpdateUserLocation:(QUserLocation *)userLocation fromHeading:(BOOL)fromHeading {
     NSLog(@"%s fromHeading = %d, location = %@, heading = %@", __FUNCTION__, fromHeading, userLocation.location, userLocation.heading);
-    _currentLocation = userLocation;
     
+    if (!userLocation) return;
+    
+    _currentLocation = userLocation;
     // Todo: confirm structure data valid.
     if (!_selectedLocation) {
         _selectedLocation = userLocation;
@@ -201,7 +221,7 @@
 #pragma mark - SearchBar
 
 - (void)setupSearchView {
-    _searchView = [[UIView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 344, [UIScreen mainScreen].bounds.size.width, BM_SEARCH_BAR_HEIGHT + BM_TABLE_VIEW_HEIGHT)];
+    _searchView = [[UIView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - BM_SEARCH_BAR_HEIGHT - BM_TABLE_VIEW_HEIGHT, [UIScreen mainScreen].bounds.size.width, BM_SEARCH_BAR_HEIGHT + BM_TABLE_VIEW_HEIGHT)];
 //    _searchView.backgroundColor = [UIColor systemGroupedBackgroundColor];
     [self.view addSubview:_searchView];
     
