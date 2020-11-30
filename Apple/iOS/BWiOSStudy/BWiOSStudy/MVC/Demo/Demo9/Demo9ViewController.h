@@ -13,8 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Demo9ViewController : UIViewController
 
-@property (nonatomic, assign) CLLocationCoordinate2D initialSelectedCoordinate;  ///< 初始选中位置
-@property (nonatomic, copy) void(^confirmSelection)(CLLocationCoordinate2D coordinate);  ///< 确实选择事件
+@property (nonatomic, strong) CLLocation *initialSelectedLocation;  ///< 初始选中位置
+@property (nonatomic, copy) void(^confirmSelection)(CLLocationCoordinate2D location);  ///< 确实选择事件
 
 @end
 
