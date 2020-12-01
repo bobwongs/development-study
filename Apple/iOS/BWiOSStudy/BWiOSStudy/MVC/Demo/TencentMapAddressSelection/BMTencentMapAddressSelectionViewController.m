@@ -7,10 +7,13 @@
 //
 
 #import "BMTencentMapAddressSelectionViewController.h"
-
 // 腾讯地图
 #import <QMapKit/QMapKit.h>
 #import <QMapKit/QMSSearchKit.h>
+#import <QMapKit/QMapServices.h>
+#import <QMapKit/QMSSearchServices.h>
+
+#import <YYCategories/UIColor+YYAdd.h>
 
 #define BM_SEARCH_BAR_HEIGHT 44.0
 #define BM_TABLE_VIEW_HEIGHT 350.0
@@ -46,6 +49,10 @@
     [super viewDidLoad];
     self.title = @"位置";
     self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    // 启用腾讯地图的检索功能
+    [QMapServices sharedServices].APIKey = @"YXNBZ-6LR66-NMNSY-E5F2O-NXAX6-ZQFZU";
+    [QMSSearchServices sharedServices].apiKey = @"YXNBZ-6LR66-NMNSY-E5F2O-NXAX6-ZQFZU";
     
     [self setNavigationBar];
     [self checkLocatingPrivacy];
@@ -122,7 +129,7 @@
     CGFloat buttonWidth = 22.0 + buttonInsetSpace * 2;
     CGFloat buttonSpaceHorizonal = 20.0, buttonSpaceVertical = 30;
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(CGRectGetMaxX(self.mapView.frame) - buttonSpace - buttonWidth, CGRectGetMaxY(self.mapView.frame) - buttonSpace - buttonWidth, buttonWidth, buttonWidth);
+    button.frame = CGRectMake(CGRectGetMaxX(self.mapView.frame) - buttonSpaceHorizonal - buttonWidth, CGRectGetMaxY(self.mapView.frame) - buttonSpaceVertical - buttonWidth, buttonWidth, buttonWidth);
     button.imageEdgeInsets = UIEdgeInsetsMake(buttonInsetSpace, buttonInsetSpace, buttonInsetSpace, buttonInsetSpace);
     [button setImage:[UIImage imageNamed:@"tc_map_icon_located_blue"] forState:UIControlStateNormal];
     button.backgroundColor = [UIColor colorWithRed:76.0 / 255 green:76.0 / 255 blue:76.0 / 255 alpha:1];
@@ -140,10 +147,20 @@
 }
 
 - (void)setNavigationBar {
-    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(dismissVC)];
-    self.navigationItem.leftBarButtonItem = leftItem;
+    // 返回按钮
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    backButton.frame = CGRectMake(0, 0, 44, 24);
+    [backButton setImage:[UIImage imageNamed:@"tc_map_icon_btn_back"] forState:UIControlStateNormal];
+    [backButton addTarget:self action:@selector(dismissVC) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    self.navigationItem.leftBarButtonItem = backItem;
     
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(confirmAction)];
+    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [rightButton setTitle:@"确定" forState:UIControlStateNormal];
+    [rightButton setTitleColor:UIColorHex(0x333333) forState:UIControlStateNormal];
+    rightButton.titleLabel.font = [UIFont systemFontOfSize:14.0];
+    [rightButton addTarget:self action:@selector(confirmAction) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
     self.navigationItem.rightBarButtonItem = rightItem;
 }
 
@@ -168,6 +185,8 @@
 - (void)toCurrentLocationAction {
     if (self.currentLocation) {
         [self.mapView setCenterCoordinate:self.currentLocation.location.coordinate];
+        // 重搜地址列表
+        [self searchCurrentLocation];
     }
 }
 
@@ -193,10 +212,10 @@
     // page_index。从1开始
     option.page_index = _search_data_page_index < 1 ? 1 : _search_data_page_index;
     // 关键词
-    option.keyword = _searchKeyword;
+    if (_searchKeyword.length) option.keyword = _searchKeyword;
     // 中心坐标，附近1000米
     CLLocationCoordinate2D centerCoord = self.mapView.centerCoordinate;
-    option.boundary = [NSString stringWithFormat:@"nearby(%f,%f,1000,1)", centerCoord.latitude, centerCoord.longitude];
+    option.boundary = [NSString stringWithFormat:@"nearby(%f,%f,2000,1)", centerCoord.latitude, centerCoord.longitude];
     // 开始搜索
     [self.mapSearcher searchWithPoiSearchOption:option];
 }
@@ -206,7 +225,8 @@
 - (void)mapView:(QMapView *)mapView didUpdateUserLocation:(QUserLocation *)userLocation fromHeading:(BOOL)fromHeading {
     NSLog(@"%s fromHeading = %d, location = %@, heading = %@", __FUNCTION__, fromHeading, userLocation.location, userLocation.heading);
     
-    if (!userLocation) return;
+    // 有效地址校验
+    if (!userLocation.location) return;
     
     // 记录当前位置
     _currentLocation = userLocation;
@@ -232,9 +252,8 @@
     return nil;
 }
 
-- (void)mapView:(QMapView *)mapView regionWillChangeAnimated:(BOOL)animated gesture:(BOOL)bGesture {
-    [self.view endEditing:YES];
-}
+//- (void)mapView:(QMapView *)mapView regionWillChangeAnimated:(BOOL)animated gesture:(BOOL)bGesture {
+//}
 
 - (void)mapViewRegionChange:(QMapView *)mapView {
     // 更新位置
@@ -269,7 +288,7 @@
         
         // 地图移动到搜索结果的第一个位置
         _selectedIndex = 0;
-        if (_searchBar.text.length) {
+        if (_searchBar.text.length && poiSearchResult.dataArray.count) {
             QMSPoiData *firstData = poiSearchResult.dataArray[0];
             _annotation.coordinate = firstData.location;
             [self.mapView setCenterCoordinate:firstData.location animated:YES];
@@ -284,7 +303,13 @@
         _searchResultArray = [_searchResultArray arrayByAddingObjectsFromArray:poiSearchResult.dataArray];
     }
     
+    self.searchResultTableView.tableFooterView.hidden = YES;
     [_searchResultTableView reloadData];
+}
+
+- (void)searchWithSearchOption:(QMSSearchOption *)searchOption didFailWithError:(NSError *)error {
+    NSLog(@"searchWithSearchOption didFailWithError: %@", error.description);
+    self.searchResultTableView.tableFooterView.hidden = YES;
 }
 
 #pragma mark - SearchBar
@@ -295,8 +320,10 @@
     [self.view addSubview:_searchView];
     
     _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 44)];
+    _searchBar.placeholder = @"搜索地点";
 //    _searchBar.showsCancelButton = YES;
     _searchBar.delegate = self;
+    _searchBar.returnKeyType = UIReturnKeyDone;
     [_searchView addSubview:_searchBar];
     
     _searchResultTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, [UIScreen mainScreen].bounds.size.width, BM_TABLE_VIEW_HEIGHT) style:UITableViewStyleGrouped];
@@ -319,10 +346,15 @@
     [self.view endEditing:YES];
 }
 
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+// 编辑了搜索框即开始搜索
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     _searchKeyword = searchBar.text;
     _search_data_page_index = 1;
     [self searchCurrentLocation];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self.view endEditing:YES];
 }
 
 #pragma mark - TableView
@@ -354,6 +386,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self.view endEditing:YES];
     
     _selectedIndex = indexPath.row;
     QMSPoiData *data = _searchResultArray[_selectedIndex];
@@ -368,15 +401,17 @@
     if (indexPath.row + 1 == _searchResultArray.count) {
         NSLog(@"Trigger load more data event.");
 
-        UIActivityIndicatorView *spinner;
-        if (@available(iOS 13.0, *)) {
-            spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
-        } else {
-            spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        if (!self.searchResultTableView.tableFooterView) {
+            UIActivityIndicatorView *spinner;
+            if (@available(iOS 13.0, *)) {
+                spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
+            } else {
+                spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+            }
+            [spinner startAnimating];
+            spinner.frame = CGRectMake(0, 0, tableView.bounds.size.width, 44);
+            self.searchResultTableView.tableFooterView = spinner;
         }
-        [spinner startAnimating];
-        spinner.frame = CGRectMake(0, 0, tableView.bounds.size.width, 44);
-        self.searchResultTableView.tableFooterView = spinner;
         self.searchResultTableView.tableFooterView.hidden = NO;
         
        _search_data_page_index += 1;

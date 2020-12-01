@@ -19,6 +19,8 @@
 
 #import <QMapKit/QMSSearchServices.h>
 
+#import <QMapKit/QMapServices.h>
+
 @interface AppDelegate ()
 
 @property (strong, nonatomic) BWDemo2ViewController *demo2VC;
@@ -37,8 +39,10 @@
 //    UINavigationController *demo3NvgtVC = [[UINavigationController alloc] initWithRootViewController:[BWDemo3ViewController new]];
 //    tabBarVC.viewControllers = @[demo2NvgtVC, demo3NvgtVC];
     
-    // 启用检索功能
-    QMSSearchServices.sharedServices.apiKey = @"JFBBZ-3MHK3-26E32-YUE4Q-WE5F7-6AFMV";
+
+//    [QMSSearchServices sharedServices].apiKey = @"YXNBZ-6LR66-NMNSY-E5F2O-NXAX6-ZQFZU";
+    [QMapServices sharedServices].APIKey = @"YXNBZ-6LR66-NMNSY-E5F2O-NXAX6-ZQFZU";
+    
     
     
     UIViewController *vc = [Demo8ViewController new];

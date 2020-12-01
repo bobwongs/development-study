@@ -59,6 +59,8 @@
 		B4AD601124BC487D00867300 /* icon_list_delete@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4AD600F24BC487D00867300 /* icon_list_delete@3x.png */; };
 		B4AD601224BC487D00867300 /* icon_list_delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4AD601024BC487D00867300 /* icon_list_delete@2x.png */; };
 		B4C1DF5E20BBFB91009FBAB1 /* BWStudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DF5D20BBFB91009FBAB1 /* BWStudyViewController.m */; };
+		B4C4B37B257618070082AD6A /* tc_map_icon_btn_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C4B379257618070082AD6A /* tc_map_icon_btn_back@3x.png */; };
+		B4C4B37C257618070082AD6A /* tc_map_icon_btn_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C4B37A257618070082AD6A /* tc_map_icon_btn_back@2x.png */; };
 		B4D6843E1F7F3B1700C42934 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D6843D1F7F3B1700C42934 /* main.m */; };
 		B4D684411F7F3B1700C42934 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D684401F7F3B1700C42934 /* AppDelegate.m */; };
 		B4D684471F7F3B1700C42934 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4D684451F7F3B1700C42934 /* Main.storyboard */; };
@@ -174,6 +176,8 @@
 		B4C1DF5C20BBFB91009FBAB1 /* BWStudyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWStudyViewController.h; sourceTree = "<group>"; };
 		B4C1DF5D20BBFB91009FBAB1 /* BWStudyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWStudyViewController.m; sourceTree = "<group>"; };
 		B4C1DF5F20BC03D8009FBAB1 /* BWiOSStudyUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BWiOSStudyUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		B4C4B379257618070082AD6A /* tc_map_icon_btn_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tc_map_icon_btn_back@3x.png"; sourceTree = "<group>"; };
+		B4C4B37A257618070082AD6A /* tc_map_icon_btn_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tc_map_icon_btn_back@2x.png"; sourceTree = "<group>"; };
 		B4D684391F7F3B1700C42934 /* BWiOSStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWiOSStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4D6843D1F7F3B1700C42934 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B4D6843F1F7F3B1700C42934 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -380,7 +384,7 @@
 			path = Demo7;
 			sourceTree = "<group>";
 		};
-		B46A62232570971C001DEBDD /* Demo9 */ = {
+		B46A62232570971C001DEBDD /* TencentMapAddressSelection */ = {
 			isa = PBXGroup;
 			children = (
 				B46A62242570972F001DEBDD /* BMTencentMapAddressSelectionViewController.h */,
@@ -388,12 +392,14 @@
 				B46A62262570972F001DEBDD /* BMTencentMapAddressSelectionViewController.xib */,
 				B46A62552570DA94001DEBDD /* Assets */,
 			);
-			path = Demo9;
+			path = TencentMapAddressSelection;
 			sourceTree = "<group>";
 		};
 		B46A62552570DA94001DEBDD /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				B4C4B37A257618070082AD6A /* tc_map_icon_btn_back@2x.png */,
+				B4C4B379257618070082AD6A /* tc_map_icon_btn_back@3x.png */,
 				B46A62562570DA94001DEBDD /* tc_map_icon_point@2x.png */,
 				B46A62572570DA94001DEBDD /* tc_map_icon_nail@3x.png */,
 				B46A62582570DA94001DEBDD /* tc_map_icon_nail@2x.png */,
@@ -433,7 +439,7 @@
 		B474F49E2179C81E0040E1E1 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				B46A62232570971C001DEBDD /* Demo9 */,
+				B46A62232570971C001DEBDD /* TencentMapAddressSelection */,
 				B46BBE29256F9F2D00D5B251 /* Demo8 */,
 				B467B366253441AE00DAB987 /* Demo7 */,
 				B462620D24F35B6200FA5A7F /* Demo6 */,
@@ -843,6 +849,7 @@
 				B491E7A9254167F000EC0581 /* time@2x.png in Resources */,
 				B491E7AD254167F300EC0581 /* time@3x.png in Resources */,
 				B486968D22423E1200E238A3 /* BWDemo2ViewController.xib in Resources */,
+				B4C4B37B257618070082AD6A /* tc_map_icon_btn_back@3x.png in Resources */,
 				B4D6844C1F7F3B1700C42934 /* LaunchScreen.storyboard in Resources */,
 				B46BBE2E256F9F4B00D5B251 /* Demo8ViewController.xib in Resources */,
 				B4654D462277F8A600668550 /* BWDemo4ViewController.xib in Resources */,
@@ -858,6 +865,7 @@
 				B46A62662570DA94001DEBDD /* tc_map_icon_nail_100@3x.png in Resources */,
 				B46A62622570DA94001DEBDD /* tc_map_icon_point@2x.png in Resources */,
 				B4F19EC62272EFAC004ADD37 /* BWDemo2HeaderView.xib in Resources */,
+				B4C4B37C257618070082AD6A /* tc_map_icon_btn_back@2x.png in Resources */,
 				B46A62682570DA94001DEBDD /* tc_map_icon_located_black@2x.png in Resources */,
 				B46A626A2570DA94001DEBDD /* tc_map_icon_located_blue@2x.png in Resources */,
 				B46F94A224D8328C00ED5933 /* invalid@3x.png in Resources */,
