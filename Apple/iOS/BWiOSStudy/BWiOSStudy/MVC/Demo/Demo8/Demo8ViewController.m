@@ -7,13 +7,13 @@
 //
 
 #import "Demo8ViewController.h"
-#import <QMapKit/QMSSearcher.h>
-#import "Demo9ViewController.h"
+#import "BMTencentMapAddressSelectionViewController.h"
 #import "UIViewController+BMModalPresentationStyle.h"
 
-@interface Demo8ViewController () <QMSSearchDelegate>
+@interface Demo8ViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) QMSSearcher *mapSearcher;
+@property (nonatomic, strong) NSArray *dataSouce;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -22,35 +22,58 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.mapSearcher = [[QMSSearcher alloc] initWithDelegate:self];
+    UIActivityIndicatorView *spinner;
+    if (@available(iOS 13.0, *)) {
+        spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
+    } else {
+        spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    }
+    [spinner startAnimating];
+    spinner.frame = CGRectMake(0, 0, self.tableView.bounds.size.width, 44);
+    self.tableView.tableFooterView = spinner;
+    self.tableView.tableFooterView.hidden = NO;
 }
 
 - (IBAction)openToSelectAddress:(id)sender {
-    Demo9ViewController *vc = [Demo9ViewController new];
+    BMTencentMapAddressSelectionViewController *vc = [BMTencentMapAddressSelectionViewController new];
     UINavigationController *nvgtVC = [[UINavigationController alloc] initWithRootViewController:vc];
 //    [self presentViewController:nvgtVC animated:YES completion:nil];
     [self bm_fullScreenPresentViewController:nvgtVC];
 }
 
 - (void)backupCode {
-    QMSSuggestionSearchOption *sugOption = [[QMSSuggestionSearchOption alloc] init];
-//    sugOption.keyword = @"北京南";
-//    sugOption.region = @"北京";
-    [self.mapSearcher searchWithSuggestionSearchOption:sugOption];
-    
-    
-//    QMSPoiSearchOption *searchOption = [[QMSPoiSearchOption alloc] init];
-//    [self.mapSearcher searchWithPoiSearchOption:searchOption];
+
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - TableView DataSource and Delegate
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataSouce.count;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    cell.textLabel.text = @"Text Label";
+    return cell;
+}
+
+//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+//    if (indexPath.row + 1 == self.dataSouce.count) {
+//        NSLog(@"Trigger load more data event.");
+//
+//        UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+//        [spinner startAnimating];
+//        spinner.frame = CGRectMake(0, 0, tableView.bounds.size.width, 44);
+//        self.tableView.tableFooterView = spinner;
+//        self.tableView.tableFooterView.hidden = NO;
+//    }
+//}
+
+#pragma mark - Setter and Getter
+
+- (NSArray *)dataSouce {
+    return @[@"1", @"2", @"3", @"4"];
+//    return @[@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8"];
+}
 
 @end

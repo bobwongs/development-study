@@ -25,8 +25,8 @@
 		B4654D452277F8A600668550 /* BWDemo4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4654D432277F8A600668550 /* BWDemo4ViewController.m */; };
 		B4654D462277F8A600668550 /* BWDemo4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4654D442277F8A600668550 /* BWDemo4ViewController.xib */; };
 		B467B369253441C600DAB987 /* Demo7Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = B467B368253441C600DAB987 /* Demo7Tool.m */; };
-		B46A62272570972F001DEBDD /* Demo9ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46A62252570972F001DEBDD /* Demo9ViewController.m */; };
-		B46A62282570972F001DEBDD /* Demo9ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B46A62262570972F001DEBDD /* Demo9ViewController.xib */; };
+		B46A62272570972F001DEBDD /* BMTencentMapAddressSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46A62252570972F001DEBDD /* BMTencentMapAddressSelectionViewController.m */; };
+		B46A62282570972F001DEBDD /* BMTencentMapAddressSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B46A62262570972F001DEBDD /* BMTencentMapAddressSelectionViewController.xib */; };
 		B46A62342570A4B4001DEBDD /* UIViewController+BMModalPresentationStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = B46A62332570A4B4001DEBDD /* UIViewController+BMModalPresentationStyle.m */; };
 		B46A62622570DA94001DEBDD /* tc_map_icon_point@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B46A62562570DA94001DEBDD /* tc_map_icon_point@2x.png */; };
 		B46A62632570DA94001DEBDD /* tc_map_icon_nail@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B46A62572570DA94001DEBDD /* tc_map_icon_nail@3x.png */; };
@@ -129,9 +129,9 @@
 		B4654D442277F8A600668550 /* BWDemo4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWDemo4ViewController.xib; sourceTree = "<group>"; };
 		B467B367253441C600DAB987 /* Demo7Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo7Tool.h; sourceTree = "<group>"; };
 		B467B368253441C600DAB987 /* Demo7Tool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo7Tool.m; sourceTree = "<group>"; };
-		B46A62242570972F001DEBDD /* Demo9ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo9ViewController.h; sourceTree = "<group>"; };
-		B46A62252570972F001DEBDD /* Demo9ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo9ViewController.m; sourceTree = "<group>"; };
-		B46A62262570972F001DEBDD /* Demo9ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Demo9ViewController.xib; sourceTree = "<group>"; };
+		B46A62242570972F001DEBDD /* BMTencentMapAddressSelectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMTencentMapAddressSelectionViewController.h; sourceTree = "<group>"; };
+		B46A62252570972F001DEBDD /* BMTencentMapAddressSelectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMTencentMapAddressSelectionViewController.m; sourceTree = "<group>"; };
+		B46A62262570972F001DEBDD /* BMTencentMapAddressSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BMTencentMapAddressSelectionViewController.xib; sourceTree = "<group>"; };
 		B46A62322570A4B4001DEBDD /* UIViewController+BMModalPresentationStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BMModalPresentationStyle.h"; sourceTree = "<group>"; };
 		B46A62332570A4B4001DEBDD /* UIViewController+BMModalPresentationStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BMModalPresentationStyle.m"; sourceTree = "<group>"; };
 		B46A62562570DA94001DEBDD /* tc_map_icon_point@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tc_map_icon_point@2x.png"; sourceTree = "<group>"; };
@@ -383,9 +383,9 @@
 		B46A62232570971C001DEBDD /* Demo9 */ = {
 			isa = PBXGroup;
 			children = (
-				B46A62242570972F001DEBDD /* Demo9ViewController.h */,
-				B46A62252570972F001DEBDD /* Demo9ViewController.m */,
-				B46A62262570972F001DEBDD /* Demo9ViewController.xib */,
+				B46A62242570972F001DEBDD /* BMTencentMapAddressSelectionViewController.h */,
+				B46A62252570972F001DEBDD /* BMTencentMapAddressSelectionViewController.m */,
+				B46A62262570972F001DEBDD /* BMTencentMapAddressSelectionViewController.xib */,
 				B46A62552570DA94001DEBDD /* Assets */,
 			);
 			path = Demo9;
@@ -839,7 +839,7 @@
 				B4AD601224BC487D00867300 /* icon_list_delete@2x.png in Resources */,
 				B462621224F35B8300FA5A7F /* Demo6ViewController.xib in Resources */,
 				B4ECABF521EF249100C47B1C /* BWDemo1ViewController.xib in Resources */,
-				B46A62282570972F001DEBDD /* Demo9ViewController.xib in Resources */,
+				B46A62282570972F001DEBDD /* BMTencentMapAddressSelectionViewController.xib in Resources */,
 				B491E7A9254167F000EC0581 /* time@2x.png in Resources */,
 				B491E7AD254167F300EC0581 /* time@3x.png in Resources */,
 				B486968D22423E1200E238A3 /* BWDemo2ViewController.xib in Resources */,
@@ -997,7 +997,7 @@
 				B4C1DF5E20BBFB91009FBAB1 /* BWStudyViewController.m in Sources */,
 				B4DEB87B2338785A00D8BF99 /* BMDemo2View1.m in Sources */,
 				B46BBE2D256F9F4B00D5B251 /* Demo8ViewController.m in Sources */,
-				B46A62272570972F001DEBDD /* Demo9ViewController.m in Sources */,
+				B46A62272570972F001DEBDD /* BMTencentMapAddressSelectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

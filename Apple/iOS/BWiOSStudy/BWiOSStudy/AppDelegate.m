@@ -15,7 +15,7 @@
 #import "Demo5ViewController.h"
 #import "Demo6ViewController.h"
 #import "Demo8ViewController.h"
-#import "Demo9ViewController.h"
+#import "BMTencentMapAddressSelectionViewController.h"
 
 #import <QMapKit/QMSSearchServices.h>
 

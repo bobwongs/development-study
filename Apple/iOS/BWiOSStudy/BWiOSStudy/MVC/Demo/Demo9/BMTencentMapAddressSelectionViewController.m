@@ -1,12 +1,12 @@
 //
-//  Demo9ViewController.m
+//  BMTencentMapAddressSelectionViewController.m
 //  BWiOSStudy
 //
 //  Created by BobWong on 2020/11/27.
 //  Copyright © 2020 BobWongStudio. All rights reserved.
 //
 
-#import "Demo9ViewController.h"
+#import "BMTencentMapAddressSelectionViewController.h"
 
 // 腾讯地图
 #import <QMapKit/QMapKit.h>
@@ -15,7 +15,7 @@
 #define BM_SEARCH_BAR_HEIGHT 44.0
 #define BM_TABLE_VIEW_HEIGHT 350.0
 
-@interface Demo9ViewController () <QMapViewDelegate, QMSSearchDelegate, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface BMTencentMapAddressSelectionViewController () <QMapViewDelegate, QMSSearchDelegate, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource>
 
 // UI
 @property (nonatomic, strong) UIView *searchView;
@@ -38,7 +38,7 @@
 
 @end
 
-@implementation Demo9ViewController
+@implementation BMTencentMapAddressSelectionViewController
 
 #pragma mark - Life Cycle
 
@@ -118,9 +118,9 @@
 }
 
 - (void)setupToCurrentLocationButton {
-    CGFloat buttonInsetSpace = 22.0;
+    CGFloat buttonInsetSpace = 11.0;
     CGFloat buttonWidth = 22.0 + buttonInsetSpace * 2;
-    CGFloat buttonSpace = 30.0;
+    CGFloat buttonSpaceHorizonal = 20.0, buttonSpaceVertical = 30;
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = CGRectMake(CGRectGetMaxX(self.mapView.frame) - buttonSpace - buttonWidth, CGRectGetMaxY(self.mapView.frame) - buttonSpace - buttonWidth, buttonWidth, buttonWidth);
     button.imageEdgeInsets = UIEdgeInsetsMake(buttonInsetSpace, buttonInsetSpace, buttonInsetSpace, buttonInsetSpace);
@@ -194,9 +194,9 @@
     option.page_index = _search_data_page_index < 1 ? 1 : _search_data_page_index;
     // 关键词
     option.keyword = _searchKeyword;
-    // 中心坐标
+    // 中心坐标，附近1000米
     CLLocationCoordinate2D centerCoord = self.mapView.centerCoordinate;
-    option.boundary = [NSString stringWithFormat:@"nearby(%f,%f,2000,1)", centerCoord.latitude, centerCoord.longitude];
+    option.boundary = [NSString stringWithFormat:@"nearby(%f,%f,1000,1)", centerCoord.latitude, centerCoord.longitude];
     // 开始搜索
     [self.mapSearcher searchWithPoiSearchOption:option];
 }
@@ -223,7 +223,7 @@
         _pinView = (QPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:pinIndentifier];
         if (_pinView == nil) {
             _pinView = [[QPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pinIndentifier];
-            _pinView.image = [UIImage imageNamed:@"tc_map_icon_nail_100"];
+            _pinView.image = [UIImage imageNamed:@"tc_map_icon_nail"];
         }
         
         return _pinView;
@@ -263,7 +263,7 @@
 - (void)searchWithPoiSearchOption:(QMSPoiSearchOption *)poiSearchOption didReceiveResult:(QMSPoiSearchResult *)poiSearchResult {
     NSLog(@"%@", poiSearchResult);
     
-    // 若为第一页，重刷数据；移动到第一个位置
+    // 若为第一页：重刷数据；移动到第一个位置
     if (poiSearchOption.page_index == 1) {
         _searchResultArray = @[];
         
@@ -275,7 +275,8 @@
             [self.mapView setCenterCoordinate:firstData.location animated:YES];
         }
         
-#warning Todo: To scroll to top.
+        // 返回列表顶部
+        [self.searchResultTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:NSNotFound inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
     }
     
     // 有数据则拼接
@@ -304,6 +305,14 @@
     _searchResultTableView.delegate = self;
     _searchResultTableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0.01, 0.01)];
     [_searchView addSubview:_searchResultTableView];
+}
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+    searchBar.showsCancelButton = YES;
+}
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
+    searchBar.showsCancelButton = NO;
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
@@ -359,7 +368,12 @@
     if (indexPath.row + 1 == _searchResultArray.count) {
         NSLog(@"Trigger load more data event.");
 
-        UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        UIActivityIndicatorView *spinner;
+        if (@available(iOS 13.0, *)) {
+            spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
+        } else {
+            spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        }
         [spinner startAnimating];
         spinner.frame = CGRectMake(0, 0, tableView.bounds.size.width, 44);
         self.searchResultTableView.tableFooterView = spinner;
@@ -394,7 +408,7 @@
 - (void)keyboardWillHide:(NSNotification *)notification {
     __weak typeof(self) weakSelf = self;
     [UIView animateWithDuration:0.2 animations:^{
-        weakSelf.searchView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 344, weakSelf.searchView.bounds.size.width, 344);
+        weakSelf.searchView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - BM_SEARCH_BAR_HEIGHT - BM_TABLE_VIEW_HEIGHT, [UIScreen mainScreen].bounds.size.width, BM_SEARCH_BAR_HEIGHT + BM_TABLE_VIEW_HEIGHT);
         weakSelf.searchResultTableView.frame = CGRectMake(0, weakSelf.searchBar.frame.size.height, [UIScreen mainScreen].bounds.size.width, weakSelf.searchView.frame.size.height - weakSelf.searchBar.frame.size.height);
     }];
 }

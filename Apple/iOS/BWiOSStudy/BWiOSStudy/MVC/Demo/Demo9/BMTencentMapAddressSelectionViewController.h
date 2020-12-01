@@ -1,5 +1,5 @@
 //
-//  Demo9ViewController.h
+//  BMTencentMapAddressSelectionViewController.h
 //  BWiOSStudy
 //
 //  Created by BobWong on 2020/11/27.
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Demo9ViewController : UIViewController
+@interface BMTencentMapAddressSelectionViewController : UIViewController
 
 @property (nonatomic, strong) CLLocation *initialSelectedLocation;  ///< 初始选中位置
 @property (nonatomic, copy) void(^confirmSelection)(CLLocationCoordinate2D location);  ///< 确实选择事件
