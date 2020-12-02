@@ -174,9 +174,8 @@
 - (void)confirmAction {
     NSLog(@"%@ confirm", NSStringFromClass([self class]));
     QMSPoiData *data = _searchResultArray[_selectedIndex];
-    CLLocationCoordinate2D location = data.location;
-    NSLog(@"Confirm Action Location - longitude: %.6f, latitude: %.6f", location.longitude, location.latitude);
-    if (_confirmSelection) _confirmSelection(location);
+    NSLog(@"Confirm Action Location: %@", data);
+    if (_confirmSelection) _confirmSelection(data);
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

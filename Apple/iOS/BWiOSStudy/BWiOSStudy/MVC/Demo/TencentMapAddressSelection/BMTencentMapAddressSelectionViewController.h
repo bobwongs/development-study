@@ -8,13 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <QMapKit/QMSSearchResult.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BMTencentMapAddressSelectionViewController : UIViewController
 
 @property (nonatomic, strong) CLLocation *initialSelectedLocation;  ///< 初始选中位置
-@property (nonatomic, copy) void(^confirmSelection)(CLLocationCoordinate2D location);  ///< 确实选择事件
+@property (nonatomic, copy) void(^confirmSelection)(QMSPoiData *location);  ///< 确实选择事件
 
 @end
 
