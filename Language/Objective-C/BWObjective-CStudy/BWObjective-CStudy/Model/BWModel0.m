@@ -10,4 +10,11 @@
 
 @implementation BWModel0
 
+- (instancetype)init {
+    if (self = [super init]) {
+        _tag = YES;
+    }
+    return self;
+}
+
 @end

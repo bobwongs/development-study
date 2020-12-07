@@ -25,6 +25,7 @@
 		B4654D452277F8A600668550 /* BWDemo4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4654D432277F8A600668550 /* BWDemo4ViewController.m */; };
 		B4654D462277F8A600668550 /* BWDemo4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4654D442277F8A600668550 /* BWDemo4ViewController.xib */; };
 		B467B369253441C600DAB987 /* Demo7Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = B467B368253441C600DAB987 /* Demo7Tool.m */; };
+		B4697AA525778ADA00682579 /* Demo10Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4697AA425778ADA00682579 /* Demo10Storyboard.storyboard */; };
 		B46A62272570972F001DEBDD /* BMTencentMapAddressSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46A62252570972F001DEBDD /* BMTencentMapAddressSelectionViewController.m */; };
 		B46A62282570972F001DEBDD /* BMTencentMapAddressSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B46A62262570972F001DEBDD /* BMTencentMapAddressSelectionViewController.xib */; };
 		B46A62342570A4B4001DEBDD /* UIViewController+BMModalPresentationStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = B46A62332570A4B4001DEBDD /* UIViewController+BMModalPresentationStyle.m */; };
@@ -54,6 +55,8 @@
 		B482AAAB251D867400D8F5E2 /* BMHomeProtocolView.m in Sources */ = {isa = PBXBuildFile; fileRef = B482AAA9251D867400D8F5E2 /* BMHomeProtocolView.m */; };
 		B486968C22423E1200E238A3 /* BWDemo2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B486968A22423E1200E238A3 /* BWDemo2ViewController.m */; };
 		B486968D22423E1200E238A3 /* BWDemo2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B486968B22423E1200E238A3 /* BWDemo2ViewController.xib */; };
+		B48AAD372578E0B400AD4114 /* Demo11ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B48AAD352578E0B400AD4114 /* Demo11ViewController.m */; };
+		B48AAD382578E0B400AD4114 /* Demo11ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48AAD362578E0B400AD4114 /* Demo11ViewController.xib */; };
 		B491E7A9254167F000EC0581 /* time@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B491E7A4254167AC00EC0581 /* time@2x.png */; };
 		B491E7AD254167F300EC0581 /* time@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B491E7A5254167AC00EC0581 /* time@3x.png */; };
 		B4AD601124BC487D00867300 /* icon_list_delete@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4AD600F24BC487D00867300 /* icon_list_delete@3x.png */; };
@@ -131,6 +134,7 @@
 		B4654D442277F8A600668550 /* BWDemo4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWDemo4ViewController.xib; sourceTree = "<group>"; };
 		B467B367253441C600DAB987 /* Demo7Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo7Tool.h; sourceTree = "<group>"; };
 		B467B368253441C600DAB987 /* Demo7Tool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo7Tool.m; sourceTree = "<group>"; };
+		B4697AA425778ADA00682579 /* Demo10Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Demo10Storyboard.storyboard; sourceTree = "<group>"; };
 		B46A62242570972F001DEBDD /* BMTencentMapAddressSelectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMTencentMapAddressSelectionViewController.h; sourceTree = "<group>"; };
 		B46A62252570972F001DEBDD /* BMTencentMapAddressSelectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMTencentMapAddressSelectionViewController.m; sourceTree = "<group>"; };
 		B46A62262570972F001DEBDD /* BMTencentMapAddressSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BMTencentMapAddressSelectionViewController.xib; sourceTree = "<group>"; };
@@ -169,6 +173,9 @@
 		B486968922423E1200E238A3 /* BWDemo2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDemo2ViewController.h; sourceTree = "<group>"; };
 		B486968A22423E1200E238A3 /* BWDemo2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDemo2ViewController.m; sourceTree = "<group>"; };
 		B486968B22423E1200E238A3 /* BWDemo2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWDemo2ViewController.xib; sourceTree = "<group>"; };
+		B48AAD342578E0B400AD4114 /* Demo11ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo11ViewController.h; sourceTree = "<group>"; };
+		B48AAD352578E0B400AD4114 /* Demo11ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo11ViewController.m; sourceTree = "<group>"; };
+		B48AAD362578E0B400AD4114 /* Demo11ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Demo11ViewController.xib; sourceTree = "<group>"; };
 		B491E7A4254167AC00EC0581 /* time@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time@2x.png"; sourceTree = "<group>"; };
 		B491E7A5254167AC00EC0581 /* time@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time@3x.png"; sourceTree = "<group>"; };
 		B4AD600F24BC487D00867300 /* icon_list_delete@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_list_delete@3x.png"; sourceTree = "<group>"; };
@@ -384,6 +391,34 @@
 			path = Demo7;
 			sourceTree = "<group>";
 		};
+		B4697A9B25778A9A00682579 /* Demo9 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Demo9;
+			sourceTree = "<group>";
+		};
+		B4697A9C25778AA100682579 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				B462385D24B6C8F40016C23B /* Demo5 */,
+				B4654D412277F89200668550 /* Demo4 */,
+				B4640727227589B7001455A0 /* Demo3 */,
+				B486968322423C7100E238A3 /* Demo2 */,
+				B474F49F2179C8350040E1E1 /* BWDemo0VC.h */,
+				B474F4A02179C8350040E1E1 /* BWDemo0VC.m */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		B4697AA325778AB900682579 /* Demo10 */ = {
+			isa = PBXGroup;
+			children = (
+				B4697AA425778ADA00682579 /* Demo10Storyboard.storyboard */,
+			);
+			path = Demo10;
+			sourceTree = "<group>";
+		};
 		B46A62232570971C001DEBDD /* TencentMapAddressSelection */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,16 +474,14 @@
 		B474F49E2179C81E0040E1E1 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				B48AAD332578E0A300AD4114 /* Demo11 */,
+				B4697AA325778AB900682579 /* Demo10 */,
+				B4697A9B25778A9A00682579 /* Demo9 */,
 				B46A62232570971C001DEBDD /* TencentMapAddressSelection */,
 				B46BBE29256F9F2D00D5B251 /* Demo8 */,
 				B467B366253441AE00DAB987 /* Demo7 */,
 				B462620D24F35B6200FA5A7F /* Demo6 */,
-				B462385D24B6C8F40016C23B /* Demo5 */,
-				B4654D412277F89200668550 /* Demo4 */,
-				B4640727227589B7001455A0 /* Demo3 */,
-				B486968322423C7100E238A3 /* Demo2 */,
-				B474F49F2179C8350040E1E1 /* BWDemo0VC.h */,
-				B474F4A02179C8350040E1E1 /* BWDemo0VC.m */,
+				B4697A9C25778AA100682579 /* History */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -506,6 +539,16 @@
 				B486968B22423E1200E238A3 /* BWDemo2ViewController.xib */,
 			);
 			path = Demo2;
+			sourceTree = "<group>";
+		};
+		B48AAD332578E0A300AD4114 /* Demo11 */ = {
+			isa = PBXGroup;
+			children = (
+				B48AAD342578E0B400AD4114 /* Demo11ViewController.h */,
+				B48AAD352578E0B400AD4114 /* Demo11ViewController.m */,
+				B48AAD362578E0B400AD4114 /* Demo11ViewController.xib */,
+			);
+			path = Demo11;
 			sourceTree = "<group>";
 		};
 		B4AD600E24BC487D00867300 /* Assets */ = {
@@ -848,6 +891,7 @@
 				B46A62282570972F001DEBDD /* BMTencentMapAddressSelectionViewController.xib in Resources */,
 				B491E7A9254167F000EC0581 /* time@2x.png in Resources */,
 				B491E7AD254167F300EC0581 /* time@3x.png in Resources */,
+				B4697AA525778ADA00682579 /* Demo10Storyboard.storyboard in Resources */,
 				B486968D22423E1200E238A3 /* BWDemo2ViewController.xib in Resources */,
 				B4C4B37B257618070082AD6A /* tc_map_icon_btn_back@3x.png in Resources */,
 				B4D6844C1F7F3B1700C42934 /* LaunchScreen.storyboard in Resources */,
@@ -855,6 +899,7 @@
 				B4654D462277F8A600668550 /* BWDemo4ViewController.xib in Resources */,
 				B4AD601124BC487D00867300 /* icon_list_delete@3x.png in Resources */,
 				B482AAAA251D867400D8F5E2 /* BMHomeProtocolView.xib in Resources */,
+				B48AAD382578E0B400AD4114 /* Demo11ViewController.xib in Resources */,
 				B481385C229FBF8B009A110B /* BWDemo3TableView0Cell.xib in Resources */,
 				B46A62672570DA94001DEBDD /* tc_map_icon_nail_100@2x.png in Resources */,
 				B46A626D2570DA94001DEBDD /* tc_map_icon_located_black@3x.png in Resources */,
@@ -998,6 +1043,7 @@
 				B47A9F4122BCA2A40036A5B2 /* BWPersonModel.m in Sources */,
 				B464072B227589CE001455A0 /* BWDemo3ViewController.m in Sources */,
 				B462621124F35B8300FA5A7F /* Demo6ViewController.m in Sources */,
+				B48AAD372578E0B400AD4114 /* Demo11ViewController.m in Sources */,
 				B474F4A12179C8350040E1E1 /* BWDemo0VC.m in Sources */,
 				B46A62342570A4B4001DEBDD /* UIViewController+BMModalPresentationStyle.m in Sources */,
 				B462621924F35C5800FA5A7F /* D6PersonModel.m in Sources */,

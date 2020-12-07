@@ -15,10 +15,10 @@
 #import "Demo5ViewController.h"
 #import "Demo6ViewController.h"
 #import "Demo8ViewController.h"
+#import "Demo11ViewController.h"
+
 #import "BMTencentMapAddressSelectionViewController.h"
-
 #import <QMapKit/QMSSearchServices.h>
-
 #import <QMapKit/QMapServices.h>
 
 @interface AppDelegate ()
@@ -43,9 +43,7 @@
 //    [QMSSearchServices sharedServices].apiKey = @"YXNBZ-6LR66-NMNSY-E5F2O-NXAX6-ZQFZU";
     [QMapServices sharedServices].APIKey = @"YXNBZ-6LR66-NMNSY-E5F2O-NXAX6-ZQFZU";
     
-    
-    
-    UIViewController *vc = [Demo8ViewController new];
+    UIViewController *vc = [Demo11ViewController new];
     UINavigationController *nvgtVC = [[UINavigationController alloc] initWithRootViewController:vc];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];

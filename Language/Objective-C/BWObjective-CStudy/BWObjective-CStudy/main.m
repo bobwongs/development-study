@@ -43,6 +43,10 @@ typedef NS_ENUM(NSInteger, StudentType) {
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
+        BWModel0 *model0 = [BWModel0 new];
+//        model0.tag = YES;
+        NSLog(@"%@", @(model0.tag));
+        
 //        BWModel0 *model = [BWModel0 new];
 //        model.companyName = @"new company name";
 //

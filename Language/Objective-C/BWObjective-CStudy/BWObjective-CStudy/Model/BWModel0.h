@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 //@property (nonatomic, strong) NSArray *orderDetail;
 @property (nonatomic, strong) NSMutableArray<NSUserDefaults *> *arrayNewAddedImage;
 
+@property (nonatomic, getter=isTag) BOOL tag;
+
 @end
 
 NS_ASSUME_NONNULL_END
